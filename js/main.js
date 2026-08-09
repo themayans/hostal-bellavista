@@ -347,18 +347,45 @@ if (grid && typeof GALLERY !== "undefined") {
     const cols = cs.gridTemplateColumns.split(" ").filter(Boolean).length || 1;
     const colW = (grid.clientWidth - GAL_GAP * (cols - 1)) / cols;
     if (colW <= 0) return;                       // grid not laid out yet — try again later
-    const nextRow = new Array(cols).fill(1);
-    for (const fig of figs) {
+
+    // Each tile's height in grid rows, straight from its photograph's ratio.
+    const spans = figs.map(fig => {
       const item = GALLERY[+fig.dataset.index];
       const ratio = item && item.w && item.h ? item.h / item.w : 0.72;
-      const span = Math.max(1, Math.round((colW * ratio + GAL_GAP) / (GAL_ROW + GAL_GAP)));
+      return Math.max(1, Math.round((colW * ratio + GAL_GAP) / (GAL_ROW + GAL_GAP)));
+    });
+
+    /* Balancing the columns.
+       Filling left-to-right in array order leaves one column running far past
+       the others, because whatever lands last is whatever is left. Instead:
+       assign the TALLEST tiles first, each to whichever column is currently
+       shortest (the classic longest-processing-time heuristic). The panoramas,
+       being only a few rows deep, end up as the filler that levels everything
+       off — so the columns finish within about a tile of each other.
+       Then re-sort each column back into curated order, so reading down a
+       column still follows the sequence in GALLERY. Nothing is stretched or
+       cropped to achieve this; only the placement changes. */
+    const byTallest = figs.map((_, i) => i).sort((a, b) => spans[b] - spans[a] || a - b);
+    const colItems = Array.from({ length: cols }, () => []);
+    const colHeight = new Array(cols).fill(0);
+    for (const i of byTallest) {
       let c = 0;
-      for (let k = 1; k < cols; k++) if (nextRow[k] < nextRow[c]) c = k;
-      fig.style.gridColumnStart = c + 1;
-      fig.style.gridRowStart = nextRow[c];
-      fig.style.gridRowEnd = "span " + span;
-      nextRow[c] += span;
+      for (let k = 1; k < cols; k++) if (colHeight[k] < colHeight[c]) c = k;
+      colItems[c].push(i);
+      colHeight[c] += spans[i];
     }
+
+    colItems.forEach((list, c) => {
+      list.sort((a, b) => a - b);
+      let row = 1;
+      for (const i of list) {
+        const fig = figs[i];
+        fig.style.gridColumnStart = c + 1;
+        fig.style.gridRowStart = row;
+        fig.style.gridRowEnd = "span " + spans[i];
+        row += spans[i];
+      }
+    });
   }
   layoutGallery();
   // Re-run once fonts and images have settled: the first pass can measure the
