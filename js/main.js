@@ -177,9 +177,15 @@ if (langBtn && langMenu) {
   });
 }
 
-/* ---------- Rooms ---------- */
+/* ---------- Rooms and apartments ----------
+   Two separate grids, because they are two different products: rooms are in
+   the hostal itself, on the port, with daily housekeeping and the restaurant
+   downstairs. The apartments are self-catering and elsewhere on the island —
+   a guest booking one is not staying at the hostal at all. Mixing them in one
+   list invites people to book the wrong thing. */
 const roomsGrid = $("#roomsGrid");
-if (roomsGrid && typeof ROOMS !== "undefined") {
+const apartmentsGrid = $("#apartmentsGrid");
+if ((roomsGrid || apartmentsGrid) && typeof ROOMS !== "undefined") {
   const icon = {
     guests: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4 0-9 2-9 5v3h18v-3c0-3-5-5-9-5Z"/></svg>',
     bed:    '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7h2v6h14V9a3 3 0 0 0-3-3h-5v7H3V7Zm-1 8h20v5h-2v-2H4v2H2v-5Zm5-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"/></svg>',
@@ -189,6 +195,8 @@ if (roomsGrid && typeof ROOMS !== "undefined") {
   };
 
   ROOMS.forEach(room => {
+    const target = room.type === "apartment" ? apartmentsGrid : roomsGrid;
+    if (!target) return;
     const card = document.createElement("article");
     card.className = "room-card";
 
@@ -221,7 +229,7 @@ if (roomsGrid && typeof ROOMS !== "undefined") {
           `<a class="btn btn-primary btn-sm" data-book="${room.id}" href="#" target="_blank" rel="noopener">${t("room.book")}</a>` +
         `</div>` +
       `</div>`;
-    roomsGrid.appendChild(card);
+    target.appendChild(card);
   });
 }
 

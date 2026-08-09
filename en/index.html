@@ -347,11 +347,11 @@
     <div class="container">
       <div class="section-head">
         <p class="eyebrow" data-i18n="rooms.eyebrow">Accommodation</p>
-        <h2 data-i18n="rooms.title">Rooms and apartments</h2>
-        <p class="lead" data-i18n="rooms.lead">Thirty-eight single, double and triple rooms in the hostal, plus three apartments elsewhere on the island for stays that need more space.</p>
+        <h2 data-i18n="rooms.title">Rooms at the hostal</h2>
+        <p class="lead" data-i18n="rooms.lead">Thirty-eight single, double and triple rooms in the building on the port itself, with the restaurant and reception downstairs.</p>
       </div>
 
-      <!-- Cards are rendered from ROOMS in js/i18n.js -->
+      <!-- Hotel rooms only. Rendered from ROOMS (type: "room") in js/i18n.js -->
       <div class="rooms-grid" id="roomsGrid"></div>
 
       <div class="room-common">
@@ -368,6 +368,28 @@
         </ul>
         <p class="menu-note" data-i18n="rooms.commonNote">Simple, traditional decoration made for resting. Ask us about extra beds, cots and longer stays.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ========================== APARTMENTS ==========================
+       Deliberately a separate section, not more cards in the grid above.
+       These are self-catering and elsewhere on the island — a different
+       product, and a guest should not book one thinking it is the hostal. -->
+  <section class="section" id="apartments">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="apartments.eyebrow">Away from the hostal</p>
+        <h2 data-i18n="apartments.title">Apartments on the island</h2>
+        <p class="lead" data-i18n="apartments.lead">Alongside the hostal we manage three self-contained apartments around Formentera, each with its own kitchen, for guests who want more space or a longer stay.</p>
+      </div>
+
+      <div class="notice-strip">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg>
+        <span data-i18n="apartments.notice">Please note: these apartments are NOT in the hostal building. They are separate, self-catering properties elsewhere on the island, with a kitchen and without restaurant or reception service. You will need a vehicle to get around.</span>
+      </div>
+
+      <!-- Rendered from ROOMS (type: "apartment") in js/i18n.js -->
+      <div class="rooms-grid" id="apartmentsGrid"></div>
     </div>
   </section>
 

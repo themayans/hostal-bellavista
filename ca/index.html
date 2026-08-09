@@ -347,11 +347,11 @@
     <div class="container">
       <div class="section-head">
         <p class="eyebrow" data-i18n="rooms.eyebrow">Allotjament</p>
-        <h2 data-i18n="rooms.title">Habitacions i apartaments</h2>
-        <p class="lead" data-i18n="rooms.lead">Trenta-vuit habitacions individuals, dobles i triples a l'hostal, més tres apartaments repartits per l'illa per a estades amb més espai.</p>
+        <h2 data-i18n="rooms.title">Habitacions de l'hostal</h2>
+        <p class="lead" data-i18n="rooms.lead">Trenta-vuit habitacions individuals, dobles i triples al mateix edifici del port, amb el restaurant i la recepció a baix.</p>
       </div>
 
-      <!-- Cards are rendered from ROOMS in js/i18n.js -->
+      <!-- Hotel rooms only. Rendered from ROOMS (type: "room") in js/i18n.js -->
       <div class="rooms-grid" id="roomsGrid"></div>
 
       <div class="room-common">
@@ -368,6 +368,28 @@
         </ul>
         <p class="menu-note" data-i18n="rooms.commonNote">Decoració tradicional i senzilla, pensada per descansar. Consulteu-nos per llits supletoris, bressols i estades llargues.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ========================== APARTMENTS ==========================
+       Deliberately a separate section, not more cards in the grid above.
+       These are self-catering and elsewhere on the island — a different
+       product, and a guest should not book one thinking it is the hostal. -->
+  <section class="section" id="apartments">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="apartments.eyebrow">Fora de l'hostal</p>
+        <h2 data-i18n="apartments.title">Apartaments a l'illa</h2>
+        <p class="lead" data-i18n="apartments.lead">A més de l'hostal gestionem tres apartaments independents repartits per Formentera, cadascun amb cuina pròpia, per a qui busca més espai o una estada llarga.</p>
+      </div>
+
+      <div class="notice-strip">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg>
+        <span data-i18n="apartments.notice">Atenció: aquests apartaments NO són a l'edifici de l'hostal. Són allotjaments independents en altres punts de l'illa, amb cuina i sense servei de restaurant ni recepció. Necessitareu vehicle per moure-us.</span>
+      </div>
+
+      <!-- Rendered from ROOMS (type: "apartment") in js/i18n.js -->
+      <div class="rooms-grid" id="apartmentsGrid"></div>
     </div>
   </section>
 

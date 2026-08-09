@@ -347,11 +347,11 @@
     <div class="container">
       <div class="section-head">
         <p class="eyebrow" data-i18n="rooms.eyebrow">Unterkunft</p>
-        <h2 data-i18n="rooms.title">Zimmer und Apartments</h2>
-        <p class="lead" data-i18n="rooms.lead">Achtunddreißig Einzel-, Doppel- und Dreibettzimmer im Hostal, dazu drei Apartments an anderen Orten der Insel für Aufenthalte mit mehr Platz.</p>
+        <h2 data-i18n="rooms.title">Zimmer im Hostal</h2>
+        <p class="lead" data-i18n="rooms.lead">Achtunddreißig Einzel-, Doppel- und Dreibettzimmer im Gebäude direkt am Hafen, mit Restaurant und Rezeption im Erdgeschoss.</p>
       </div>
 
-      <!-- Cards are rendered from ROOMS in js/i18n.js -->
+      <!-- Hotel rooms only. Rendered from ROOMS (type: "room") in js/i18n.js -->
       <div class="rooms-grid" id="roomsGrid"></div>
 
       <div class="room-common">
@@ -368,6 +368,28 @@
         </ul>
         <p class="menu-note" data-i18n="rooms.commonNote">Schlichte, traditionelle Einrichtung zum Ausruhen. Fragen Sie uns nach Zustellbetten, Kinderbetten und längeren Aufenthalten.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ========================== APARTMENTS ==========================
+       Deliberately a separate section, not more cards in the grid above.
+       These are self-catering and elsewhere on the island — a different
+       product, and a guest should not book one thinking it is the hostal. -->
+  <section class="section" id="apartments">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="apartments.eyebrow">Außerhalb des Hostals</p>
+        <h2 data-i18n="apartments.title">Apartments auf der Insel</h2>
+        <p class="lead" data-i18n="apartments.lead">Neben dem Hostal betreuen wir drei eigenständige Apartments auf Formentera, jeweils mit eigener Küche, für alle, die mehr Platz oder einen längeren Aufenthalt suchen.</p>
+      </div>
+
+      <div class="notice-strip">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg>
+        <span data-i18n="apartments.notice">Bitte beachten Sie: Diese Apartments liegen NICHT im Gebäude des Hostals. Es sind eigenständige Unterkünfte an anderen Orten der Insel, mit Küche und ohne Restaurant- oder Rezeptionsservice. Für die Wege brauchen Sie ein Fahrzeug.</span>
+      </div>
+
+      <!-- Rendered from ROOMS (type: "apartment") in js/i18n.js -->
+      <div class="rooms-grid" id="apartmentsGrid"></div>
     </div>
   </section>
 
