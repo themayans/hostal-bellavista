@@ -111,6 +111,13 @@ rather than guessing. Each is a booking you are probably losing.
 **Seasonal opening matters most.** Formentera is highly seasonal and a guest who
 cannot tell whether you are open in April will book elsewhere.
 
+When you supply these, also add the matching questions to `FAQ` in
+`js/i18n.js`. The FAQ deliberately omits check-in times, rates, opening hours
+and the pet policy today, because those answers are also emitted as
+`FAQPage` structured data — Google and AI assistants read them directly, and a
+confident wrong answer there is worse than no answer at all. Each new question
+needs a `faq.<id>.q` and `faq.<id>.a` in all five languages.
+
 These were checked against **both** old sites and are genuinely absent from
 each — this is not an oversight in the migration. The current site's CMS even
 has empty fields waiting for them (`Desde` / `por noche` / `Ocupación máxima`
