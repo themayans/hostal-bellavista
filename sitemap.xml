@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://themayans.github.io/hostal-bellavista/</loc>
     <lastmod>2026-08-09</lastmod>
@@ -12,6 +13,121 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://themayans.github.io/hostal-bellavista/de/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://themayans.github.io/hostal-bellavista/ca/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://themayans.github.io/hostal-bellavista/" />
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/hero.webp</image:loc>
+      <image:title>Hostal Bellavista</image:title>
+      <image:caption>Hostal y restaurante en primera línea del puerto</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-economica.webp</image:loc>
+      <image:title>Habitación Económica</image:title>
+      <image:caption>Una habitación acogedora y cómoda para dos personas, con vistas a nuestro patio interior y una decoración moderna y fresca. Equipada con cama doble o dos camas individuales, baño privado, aire acondicionado y escritorio de madera.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-estandar.webp</image:loc>
+      <image:title>Habitación Doble Estándar</image:title>
+      <image:caption>Habitación exterior para dos personas con vistas a la calle. Dispone de cama doble o dos camas individuales, baño privado con bañera, aire acondicionado, escritorio de madera y un amplio armario.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-vistapuerto.webp</image:loc>
+      <image:title>Habitación Vista Puerto</image:title>
+      <image:caption>Nuestra habitación estrella: amplia, luminosa y con preciosas vistas al puerto de La Savina. Dispone de cama doble, sofá, baño privado con bañera y complementos, aire acondicionado, escritorio de madera y un amplio armario.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-loca.webp</image:loc>
+      <image:title>Apartamento Can Loca — Es Pujols</image:title>
+      <image:caption>Apartamento en primera línea de mar en Es Pujols, con una habitación doble, salón con sofá cama, cocina, baño y terraza.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-peix.webp</image:loc>
+      <image:title>Apartamento Can Peix 22 — La Savina</image:title>
+      <image:caption>Apartamento en el puerto de La Savina con dos habitaciones, baño, cocina, salón y una gran terraza. Ideal para familias o dos parejas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-barbaroja.webp</image:loc>
+      <image:title>Apartamento Barbaroja — Ca Marí, km 6</image:title>
+      <image:caption>Apartamento en Ca Marí, en el kilómetro 6, cerca de la playa, con una habitación, cocina y salón con cama supletoria.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-port-wide.webp</image:loc>
+      <image:caption>Panorámica del puerto de La Savina vista desde el agua, con el pueblo y los amarres al fondo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-sign.webp</image:loc>
+      <image:caption>Rótulo Hostal Bellavista sobre la fachada color arena bajo un cielo azul</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-food-marina.webp</image:loc>
+      <image:caption>Plato de pasta con marisco y una copa de vino blanco en una mesa junto a los veleros del puerto</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-room.webp</image:loc>
+      <image:caption>Comedor interior del restaurante con manteles blancos y sillas rojas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-fishing-boat.webp</image:loc>
+      <image:caption>Barca de pesca amarrada al pantalán de madera del puerto de La Savina</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina-view.webp</image:loc>
+      <image:caption>El puerto deportivo enmarcado por palmeras, con Ibiza en el horizonte</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-paella.webp</image:loc>
+      <image:caption>Paella de marisco con gambas, cigalas, mejillones y limón</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-olive.webp</image:loc>
+      <image:caption>Fachada del hostal vista desde abajo con un olivo en primer plano</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-lounge.webp</image:loc>
+      <image:caption>Salón del hostal con butacas de mimbre blanco, cojines de colores y plantas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-mariscada.webp</image:loc>
+      <image:caption>Bandeja de mariscos con gambas, almejas, cangrejo y salsa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-11.webp</image:loc>
+      <image:caption>Embarcaciones amarradas en el puerto con el hostal y las palmeras al fondo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-bar.webp</image:loc>
+      <image:caption>Comedor del restaurante hacia la barra, con mesas vestidas de blanco y sillas rojas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-chipirones.webp</image:loc>
+      <image:caption>Chipirones guisados con perejil recién servidos en la sartén</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-palms.webp</image:loc>
+      <image:caption>Palmeras frente al edificio del Hostal Bellavista y los soportales del restaurante</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-reception.webp</image:loc>
+      <image:caption>Recepción del hostal con butacas rojas y fotografías enmarcadas de la isla</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-13.webp</image:loc>
+      <image:caption>El hostal visto desde el pantalán, con viajeros llegando con maletas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-14.webp</image:loc>
+      <image:caption>Paseo del puerto con el hostal al fondo y viajeros caminando con equipaje</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-low.webp</image:loc>
+      <image:caption>Fachada del Hostal Bellavista con sus ventanas de marco blanco y faroles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-promenade.webp</image:loc>
+      <image:caption>Panorámica del paseo del puerto de La Savina con palmeras y el hostal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina.webp</image:loc>
+      <image:caption>Vista del puerto deportivo de La Savina con veleros amarrados y el mar hacia Ibiza al fondo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://themayans.github.io/hostal-bellavista/en/</loc>
@@ -24,6 +140,121 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://themayans.github.io/hostal-bellavista/de/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://themayans.github.io/hostal-bellavista/ca/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://themayans.github.io/hostal-bellavista/" />
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/hero.webp</image:loc>
+      <image:title>Hostal Bellavista</image:title>
+      <image:caption>Hostal and restaurant on the first line of the port</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-economica.webp</image:loc>
+      <image:title>Economy Room</image:title>
+      <image:caption>A comfortable, welcoming room for two, looking onto our inner courtyard, with fresh modern decoration. It has a double bed or twin beds, private bathroom, air conditioning and a wooden desk.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-estandar.webp</image:loc>
+      <image:title>Standard Double Room</image:title>
+      <image:caption>An outward-facing room for two with a view over the street. It has a double bed or twin beds, a private bathroom with bathtub, air conditioning, a wooden desk and a large wardrobe.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-vistapuerto.webp</image:loc>
+      <image:title>Port View Room</image:title>
+      <image:caption>Our finest room: spacious, bright and with beautiful views over the port of La Savina. It has a double bed, a sofa, a private bathroom with bathtub and toiletries, air conditioning, a wooden desk and a large wardrobe.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-loca.webp</image:loc>
+      <image:title>Can Loca Apartment — Es Pujols</image:title>
+      <image:caption>A seafront apartment in Es Pujols with one double bedroom, a living room with sofa bed, kitchen, bathroom and terrace.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-peix.webp</image:loc>
+      <image:title>Can Peix 22 Apartment — La Savina</image:title>
+      <image:caption>An apartment in the port of La Savina with two bedrooms, bathroom, kitchen, living room and a large terrace. Ideal for families or two couples.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-barbaroja.webp</image:loc>
+      <image:title>Barbaroja Apartment — Ca Marí, km 6</image:title>
+      <image:caption>An apartment at Ca Marí, kilometre 6, near the beach, with one bedroom, kitchen and a living room with an extra bed.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-port-wide.webp</image:loc>
+      <image:caption>Panorama of the port of La Savina seen from the water, with the village and moorings beyond</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-sign.webp</image:loc>
+      <image:caption>Hostal Bellavista sign on the sand-coloured façade against a blue sky</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-food-marina.webp</image:loc>
+      <image:caption>A seafood pasta dish and a glass of white wine on a table beside the yachts in the port</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-room.webp</image:loc>
+      <image:caption>Interior dining room of the restaurant with white tablecloths and red chairs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-fishing-boat.webp</image:loc>
+      <image:caption>Fishing boat moored at the wooden pontoon in the port of La Savina</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina-view.webp</image:loc>
+      <image:caption>The marina framed by palm trees, with Ibiza on the horizon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-paella.webp</image:loc>
+      <image:caption>Seafood paella with prawns, langoustines, mussels and lemon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-olive.webp</image:loc>
+      <image:caption>The hostal façade seen from below with an olive tree in the foreground</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-lounge.webp</image:loc>
+      <image:caption>The hostal lounge with white wicker armchairs, colourful cushions and plants</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-mariscada.webp</image:loc>
+      <image:caption>Seafood platter with prawns, clams, crab and sauce</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-11.webp</image:loc>
+      <image:caption>Boats moored in the port with the hostal and palm trees behind</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-bar.webp</image:loc>
+      <image:caption>The restaurant dining room looking towards the bar, with white-clothed tables and red chairs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-chipirones.webp</image:loc>
+      <image:caption>Baby squid stewed with parsley, served straight from the pan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-palms.webp</image:loc>
+      <image:caption>Palm trees in front of the Hostal Bellavista building and the restaurant arcade</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-reception.webp</image:loc>
+      <image:caption>The hostal reception with red armchairs and framed photographs of the island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-13.webp</image:loc>
+      <image:caption>The hostal seen from the pontoon, with travellers arriving with their luggage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-14.webp</image:loc>
+      <image:caption>The port promenade with the hostal beyond and travellers walking with luggage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-low.webp</image:loc>
+      <image:caption>The Hostal Bellavista façade with its white-framed windows and lanterns</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-promenade.webp</image:loc>
+      <image:caption>Panorama of the La Savina port promenade with palm trees and the hostal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina.webp</image:loc>
+      <image:caption>View of the marina at La Savina with moored sailing boats and the sea towards Ibiza beyond</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://themayans.github.io/hostal-bellavista/it/</loc>
@@ -36,6 +267,121 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://themayans.github.io/hostal-bellavista/de/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://themayans.github.io/hostal-bellavista/ca/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://themayans.github.io/hostal-bellavista/" />
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/hero.webp</image:loc>
+      <image:title>Hostal Bellavista</image:title>
+      <image:caption>Hostal e ristorante in prima linea sul porto</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-economica.webp</image:loc>
+      <image:title>Camera Economica</image:title>
+      <image:caption>Una camera accogliente e confortevole per due persone, con vista sul nostro cortile interno e un arredo moderno e fresco. Dispone di letto matrimoniale o due letti singoli, bagno privato, aria condizionata e scrivania in legno.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-estandar.webp</image:loc>
+      <image:title>Camera Doppia Standard</image:title>
+      <image:caption>Camera esterna per due persone con vista sulla strada. Dispone di letto matrimoniale o due letti singoli, bagno privato con vasca, aria condizionata, scrivania in legno e un ampio armadio.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-vistapuerto.webp</image:loc>
+      <image:title>Camera Vista Porto</image:title>
+      <image:caption>La nostra camera di punta: ampia, luminosa e con splendida vista sul porto di La Savina. Dispone di letto matrimoniale, divano, bagno privato con vasca e cortesie, aria condizionata, scrivania in legno e un ampio armadio.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-loca.webp</image:loc>
+      <image:title>Appartamento Can Loca — Es Pujols</image:title>
+      <image:caption>Appartamento fronte mare a Es Pujols, con una camera matrimoniale, soggiorno con divano letto, cucina, bagno e terrazza.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-peix.webp</image:loc>
+      <image:title>Appartamento Can Peix 22 — La Savina</image:title>
+      <image:caption>Appartamento nel porto di La Savina con due camere, bagno, cucina, soggiorno e una grande terrazza. Ideale per famiglie o due coppie.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-barbaroja.webp</image:loc>
+      <image:title>Appartamento Barbaroja — Ca Marí, km 6</image:title>
+      <image:caption>Appartamento a Ca Marí, al chilometro 6, vicino alla spiaggia, con una camera, cucina e soggiorno con letto aggiuntivo.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-port-wide.webp</image:loc>
+      <image:caption>Panoramica del porto di La Savina vista dall&apos;acqua, con il paese e gli ormeggi sullo sfondo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-sign.webp</image:loc>
+      <image:caption>Insegna Hostal Bellavista sulla facciata color sabbia sotto un cielo azzurro</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-food-marina.webp</image:loc>
+      <image:caption>Un piatto di pasta ai frutti di mare e un calice di vino bianco su un tavolo accanto agli yacht del porto</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-room.webp</image:loc>
+      <image:caption>Sala interna del ristorante con tovaglie bianche e sedie rosse</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-fishing-boat.webp</image:loc>
+      <image:caption>Barca da pesca ormeggiata al pontile di legno nel porto di La Savina</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina-view.webp</image:loc>
+      <image:caption>Il porto turistico incorniciato dalle palme, con Ibiza all&apos;orizzonte</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-paella.webp</image:loc>
+      <image:caption>Paella di frutti di mare con gamberi, scampi, cozze e limone</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-olive.webp</image:loc>
+      <image:caption>Facciata dell&apos;hostal vista dal basso con un ulivo in primo piano</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-lounge.webp</image:loc>
+      <image:caption>Il salotto dell&apos;hostal con poltrone in vimini bianco, cuscini colorati e piante</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-mariscada.webp</image:loc>
+      <image:caption>Vassoio di frutti di mare con gamberi, vongole, granchio e salsa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-11.webp</image:loc>
+      <image:caption>Imbarcazioni ormeggiate nel porto con l&apos;hostal e le palme sullo sfondo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-bar.webp</image:loc>
+      <image:caption>La sala del ristorante verso il bancone, con tavoli apparecchiati in bianco e sedie rosse</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-chipirones.webp</image:loc>
+      <image:caption>Calamaretti in umido con prezzemolo appena serviti nella padella</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-palms.webp</image:loc>
+      <image:caption>Palme davanti all&apos;edificio dell&apos;Hostal Bellavista e ai portici del ristorante</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-reception.webp</image:loc>
+      <image:caption>La reception dell&apos;hostal con poltrone rosse e fotografie incorniciate dell&apos;isola</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-13.webp</image:loc>
+      <image:caption>L&apos;hostal visto dal pontile, con viaggiatori in arrivo con le valigie</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-14.webp</image:loc>
+      <image:caption>Il lungomare del porto con l&apos;hostal sullo sfondo e viaggiatori con i bagagli</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-low.webp</image:loc>
+      <image:caption>La facciata dell&apos;Hostal Bellavista con le finestre dalla cornice bianca e le lanterne</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-promenade.webp</image:loc>
+      <image:caption>Panoramica del lungomare del porto di La Savina con le palme e l&apos;hostal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina.webp</image:loc>
+      <image:caption>Vista del porto turistico di La Savina con barche a vela ormeggiate e il mare verso Ibiza sullo sfondo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://themayans.github.io/hostal-bellavista/de/</loc>
@@ -48,6 +394,121 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://themayans.github.io/hostal-bellavista/de/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://themayans.github.io/hostal-bellavista/ca/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://themayans.github.io/hostal-bellavista/" />
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/hero.webp</image:loc>
+      <image:title>Hostal Bellavista</image:title>
+      <image:caption>Hostal und Restaurant in erster Reihe am Hafen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-economica.webp</image:loc>
+      <image:title>Economy-Zimmer</image:title>
+      <image:caption>Ein gemütliches, komfortables Zimmer für zwei Personen mit Blick auf unseren Innenhof und frischer, moderner Einrichtung. Mit Doppelbett oder zwei Einzelbetten, eigenem Bad, Klimaanlage und Holzschreibtisch.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-estandar.webp</image:loc>
+      <image:title>Doppelzimmer Standard</image:title>
+      <image:caption>Zimmer nach außen für zwei Personen mit Blick auf die Straße. Mit Doppelbett oder zwei Einzelbetten, eigenem Bad mit Badewanne, Klimaanlage, Holzschreibtisch und großem Kleiderschrank.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-vistapuerto.webp</image:loc>
+      <image:title>Zimmer mit Hafenblick</image:title>
+      <image:caption>Unser schönstes Zimmer: geräumig, hell und mit herrlichem Blick auf den Hafen von La Savina. Mit Doppelbett, Sofa, eigenem Bad mit Badewanne und Pflegeprodukten, Klimaanlage, Holzschreibtisch und großem Kleiderschrank.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-loca.webp</image:loc>
+      <image:title>Apartment Can Loca — Es Pujols</image:title>
+      <image:caption>Apartment direkt am Meer in Es Pujols mit einem Doppelschlafzimmer, Wohnzimmer mit Schlafsofa, Küche, Bad und Terrasse.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-peix.webp</image:loc>
+      <image:title>Apartment Can Peix 22 — La Savina</image:title>
+      <image:caption>Apartment im Hafen von La Savina mit zwei Schlafzimmern, Bad, Küche, Wohnzimmer und großer Terrasse. Ideal für Familien oder zwei Paare.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-barbaroja.webp</image:loc>
+      <image:title>Apartment Barbaroja — Ca Marí, km 6</image:title>
+      <image:caption>Apartment in Ca Marí bei Kilometer 6, in Strandnähe, mit einem Schlafzimmer, Küche und Wohnzimmer mit Zustellbett.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-port-wide.webp</image:loc>
+      <image:caption>Panorama des Hafens von La Savina vom Wasser aus, mit dem Ort und den Liegeplätzen dahinter</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-sign.webp</image:loc>
+      <image:caption>Schriftzug Hostal Bellavista auf der sandfarbenen Fassade vor blauem Himmel</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-food-marina.webp</image:loc>
+      <image:caption>Ein Meeresfrüchte-Pastagericht und ein Glas Weißwein auf einem Tisch neben den Yachten im Hafen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-room.webp</image:loc>
+      <image:caption>Innerer Speisesaal des Restaurants mit weißen Tischdecken und roten Stühlen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-fishing-boat.webp</image:loc>
+      <image:caption>Fischerboot am hölzernen Steg im Hafen von La Savina</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina-view.webp</image:loc>
+      <image:caption>Der Yachthafen, von Palmen gerahmt, mit Ibiza am Horizont</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-paella.webp</image:loc>
+      <image:caption>Meeresfrüchte-Paella mit Garnelen, Kaisergranat, Muscheln und Zitrone</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-olive.webp</image:loc>
+      <image:caption>Die Fassade des Hostals von unten mit einem Olivenbaum im Vordergrund</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-lounge.webp</image:loc>
+      <image:caption>Die Lounge des Hostals mit weißen Korbsesseln, bunten Kissen und Pflanzen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-mariscada.webp</image:loc>
+      <image:caption>Meeresfrüchteplatte mit Garnelen, Venusmuscheln, Krabbe und Sauce</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-11.webp</image:loc>
+      <image:caption>Boote im Hafen vertäut, dahinter das Hostal und Palmen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-bar.webp</image:loc>
+      <image:caption>Der Speisesaal des Restaurants Richtung Bar, mit weiß eingedeckten Tischen und roten Stühlen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-chipirones.webp</image:loc>
+      <image:caption>Geschmorte Baby-Tintenfische mit Petersilie, frisch aus der Pfanne serviert</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-palms.webp</image:loc>
+      <image:caption>Palmen vor dem Gebäude des Hostal Bellavista und den Arkaden des Restaurants</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-reception.webp</image:loc>
+      <image:caption>Die Rezeption des Hostals mit roten Sesseln und gerahmten Fotografien der Insel</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-13.webp</image:loc>
+      <image:caption>Das Hostal vom Steg aus gesehen, mit ankommenden Reisenden und Gepäck</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-14.webp</image:loc>
+      <image:caption>Die Hafenpromenade mit dem Hostal im Hintergrund und Reisenden mit Gepäck</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-low.webp</image:loc>
+      <image:caption>Die Fassade des Hostal Bellavista mit weiß gerahmten Fenstern und Laternen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-promenade.webp</image:loc>
+      <image:caption>Panorama der Hafenpromenade von La Savina mit Palmen und dem Hostal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina.webp</image:loc>
+      <image:caption>Blick auf den Yachthafen von La Savina mit vertäuten Segelbooten und dem Meer Richtung Ibiza</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://themayans.github.io/hostal-bellavista/ca/</loc>
@@ -60,6 +521,121 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://themayans.github.io/hostal-bellavista/de/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://themayans.github.io/hostal-bellavista/ca/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://themayans.github.io/hostal-bellavista/" />
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/hero.webp</image:loc>
+      <image:title>Hostal Bellavista</image:title>
+      <image:caption>Hostal i restaurant en primera línia del port</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-economica.webp</image:loc>
+      <image:title>Habitació Econòmica</image:title>
+      <image:caption>Una habitació acollidora i còmoda per a dues persones, amb vistes al nostre pati interior i una decoració moderna i fresca. Equipada amb llit doble o dos llits individuals, bany privat, aire condicionat i escriptori de fusta.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-estandar.webp</image:loc>
+      <image:title>Habitació Doble Estàndard</image:title>
+      <image:caption>Habitació exterior per a dues persones amb vistes al carrer. Disposa de llit doble o dos llits individuals, bany privat amb banyera, aire condicionat, escriptori de fusta i un ampli armari.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/room-vistapuerto.webp</image:loc>
+      <image:title>Habitació Vista Port</image:title>
+      <image:caption>La nostra habitació estrella: àmplia, lluminosa i amb precioses vistes al port de la Savina. Disposa de llit doble, sofà, bany privat amb banyera i complements, aire condicionat, escriptori de fusta i un ampli armari.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-loca.webp</image:loc>
+      <image:title>Apartament Can Loca — Es Pujols</image:title>
+      <image:caption>Apartament en primera línia de mar a es Pujols, amb una habitació doble, sala amb sofà llit, cuina, bany i terrassa.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-can-peix.webp</image:loc>
+      <image:title>Apartament Can Peix 22 — La Savina</image:title>
+      <image:caption>Apartament al port de la Savina amb dues habitacions, bany, cuina, sala i una gran terrassa. Ideal per a famílies o dues parelles.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/apt-barbaroja.webp</image:loc>
+      <image:title>Apartament Barbaroja — Ca Marí, km 6</image:title>
+      <image:caption>Apartament a Ca Marí, al quilòmetre 6, a prop de la platja, amb una habitació, cuina i sala amb llit supletori.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-port-wide.webp</image:loc>
+      <image:caption>Panoràmica del port de la Savina vista des de l&apos;aigua, amb el poble i els amarradors al fons</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-sign.webp</image:loc>
+      <image:caption>Rètol Hostal Bellavista sobre la façana color sorra sota un cel blau</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-food-marina.webp</image:loc>
+      <image:caption>Un plat de pasta amb marisc i una copa de vi blanc en una taula vora els velers del port</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-room.webp</image:loc>
+      <image:caption>Menjador interior del restaurant amb estovalles blanques i cadires vermelles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-fishing-boat.webp</image:loc>
+      <image:caption>Barca de pesca amarrada al pantalà de fusta del port de la Savina</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina-view.webp</image:loc>
+      <image:caption>El port esportiu emmarcat per palmeres, amb Eivissa a l&apos;horitzó</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-paella.webp</image:loc>
+      <image:caption>Paella de marisc amb gambes, escamarlans, musclos i llimona</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-olive.webp</image:loc>
+      <image:caption>Façana de l&apos;hostal vista des de baix amb una olivera en primer terme</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-lounge.webp</image:loc>
+      <image:caption>El saló de l&apos;hostal amb butaques de vímet blanc, coixins de colors i plantes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-mariscada.webp</image:loc>
+      <image:caption>Safata de marisc amb gambes, cloïsses, cranc i salsa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-11.webp</image:loc>
+      <image:caption>Embarcacions amarrades al port amb l&apos;hostal i les palmeres al fons</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-bar.webp</image:loc>
+      <image:caption>El menjador del restaurant cap a la barra, amb taules vestides de blanc i cadires vermelles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-chipirones.webp</image:loc>
+      <image:caption>Calamarsons guisats amb julivert acabats de servir a la paella</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-palms.webp</image:loc>
+      <image:caption>Palmeres davant l&apos;edifici de l&apos;Hostal Bellavista i els porxos del restaurant</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-reception.webp</image:loc>
+      <image:caption>La recepció de l&apos;hostal amb butaques vermelles i fotografies emmarcades de l&apos;illa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-13.webp</image:loc>
+      <image:caption>L&apos;hostal vist des del pantalà, amb viatgers arribant amb maletes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-property-14.webp</image:loc>
+      <image:caption>El passeig del port amb l&apos;hostal al fons i viatgers caminant amb equipatge</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-low.webp</image:loc>
+      <image:caption>La façana de l&apos;Hostal Bellavista amb les finestres de marc blanc i els fanals</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-promenade.webp</image:loc>
+      <image:caption>Panoràmica del passeig del port de la Savina amb palmeres i l&apos;hostal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina.webp</image:loc>
+      <image:caption>Vista del port esportiu de la Savina amb velers amarrats i el mar cap a Eivissa al fons</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://themayans.github.io/hostal-bellavista/legal/privacy/es/</loc>

@@ -16,7 +16,12 @@ const BASE   = "/hostal-bellavista";                    // "" once on the custom
 const DOMAIN = "https://themayans.github.io";           // absolute base for canonical/hreflang/og
 const DEFAULT_LANG = "es";                              // served at the root, no prefix
 
-const I18N    = new Function(fs.readFileSync(path.join(ROOT, "js/i18n.js"), "utf8") + "; return I18N;")();
+const i18nSrc = fs.readFileSync(path.join(ROOT, "js/i18n.js"), "utf8");
+const I18N    = new Function(i18nSrc + "; return I18N;")();
+const ROOMS   = new Function(i18nSrc + "; return ROOMS;")();
+const MENU    = new Function(i18nSrc + "; return MENU;")();
+const FAQ     = new Function(i18nSrc + "; return FAQ;")();
+const GALLERY = new Function(i18nSrc + "; return GALLERY;")();
 const master  = fs.readFileSync(path.join(ROOT, "_src/home.html"), "utf8");
 
 const LANGS = ["es", "en", "it", "de", "ca"];
@@ -70,21 +75,113 @@ for (const lang of LANGS) {
   hre += '\n  <link rel="alternate" hreflang="x-default" href="' + absPath(DEFAULT_LANG) + '" />';
   $('link[rel="canonical"]').after(hre);
 
-  /* ---- Structured data: localise the describable fields ---- */
+  /* ---- Structured data ------------------------------------------------
+     The hand-written @graph in the template carries the facts that don't
+     change per language (address, geo, amenities). Everything derived from
+     content — the rooms, the menu, the FAQ, the gallery — is generated here
+     from the SAME data that renders the page, so the markup and the visible
+     page can never drift apart. That drift is the usual reason rich results
+     get penalised. */
   $('script[type="application/ld+json"]').each((i, el) => {
     let json;
     try { json = JSON.parse($(el).html()); } catch (e) { return; }
-    const nodes = Array.isArray(json["@graph"]) ? json["@graph"] : [json];
-    nodes.forEach(node => {
+    const graph = Array.isArray(json["@graph"]) ? json["@graph"] : [json];
+
+    graph.forEach(node => {
       const type = node["@type"];
       if (type === "Hotel" || type === "Restaurant" || type === "LodgingBusiness") {
         node.description = t[type === "Restaurant" ? "meta.restaurantDescription" : "meta.description"];
         node.url = absPath(lang);
       }
-      if (type === "BreadcrumbList" && Array.isArray(node.itemListElement)) {
-        node.itemListElement.forEach(it => { if (it.item === "@SELF") it.item = absPath(lang); });
-      }
     });
+
+    const hotel = graph.find(n => n["@type"] === "Hotel");
+    const restaurant = graph.find(n => n["@type"] === "Restaurant");
+    const abs = p => DOMAIN + BASE + "/" + p;
+
+    if (hotel) {
+      hotel.inLanguage = LANGS;
+      hotel.availableLanguage = ["es", "ca", "en", "it"];   // languages actually spoken at reception
+      hotel.photo = GALLERY.slice(0, 8).map(g => ({
+        "@type": "ImageObject",
+        contentUrl: abs(g.src),
+        width: g.w, height: g.h,
+        caption: t["gallery." + g.id] || ""
+      }));
+      // Room types. No price is published, so no Offer is claimed — asserting
+      // a price we don't have would be worse than omitting it.
+      hotel.containsPlace = ROOMS.filter(r => r.type === "room").map(r => ({
+        "@type": "HotelRoom",
+        name: t["room." + r.id + ".name"],
+        description: t["room." + r.id + ".desc"],
+        image: abs(r.img),
+        bed: { "@type": "BedDetails", typeOfBed: t["room.beds." + r.beds] },
+        occupancy: { "@type": "QuantitativeValue", maxValue: r.guests, unitText: "person" },
+        amenityFeature: [
+          { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
+          { "@type": "LocationFeatureSpecification", name: "Air conditioning", value: true },
+          { "@type": "LocationFeatureSpecification", name: "Private bathroom", value: true }
+        ]
+      }));
+    }
+
+    if (restaurant) {
+      restaurant.hasMenu = {
+        "@type": "Menu",
+        name: t["restaurant.title"],
+        inLanguage: lang,
+        hasMenuSection: MENU.map(course => ({
+          "@type": "MenuSection",
+          name: t["menu.course." + course.id],
+          hasMenuItem: course.items.map(item => {
+            const mi = { "@type": "MenuItem", name: t["menu." + item.id + ".name"] };
+            const d = t["menu." + item.id + ".desc"];
+            if (d) mi.description = d;
+            if (item.price) mi.offers = { "@type": "Offer", price: item.price, priceCurrency: "EUR" };
+            return mi;
+          })
+        }))
+      };
+    }
+
+    // Site-level nodes
+    graph.push({
+      "@type": "WebSite",
+      "@id": DOMAIN + BASE + "/#website",
+      url: absPath(lang),
+      name: "Hostal Restaurante Bellavista Formentera",
+      inLanguage: lang,
+      publisher: { "@id": DOMAIN + BASE + "/#hotel" }
+    });
+    graph.push({
+      "@type": "WebPage",
+      "@id": absPath(lang) + "#webpage",
+      url: absPath(lang),
+      name: t["meta.title"],
+      description: t["meta.description"],
+      inLanguage: lang,
+      isPartOf: { "@id": DOMAIN + BASE + "/#website" },
+      about: { "@id": DOMAIN + BASE + "/#hotel" },
+      primaryImageOfPage: abs("assets/images/hero.webp")
+    });
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: t["meta.ogTitle"], item: absPath(lang) }
+      ]
+    });
+    // FAQ — every answer is a fact the property publishes; see js/i18n.js.
+    graph.push({
+      "@type": "FAQPage",
+      "@id": absPath(lang) + "#faq",
+      mainEntity: FAQ.map(q => ({
+        "@type": "Question",
+        name: t["faq." + q.id + ".q"],
+        acceptedAnswer: { "@type": "Answer", text: t["faq." + q.id + ".a"] }
+      }))
+    });
+
+    json["@graph"] = graph;
     $(el).text(JSON.stringify(json, null, 2));
   });
 
@@ -92,15 +189,37 @@ for (const lang of LANGS) {
   // Markup is authored with paths like "css/styles.css" (no leading slash);
   // anything already absolute, protocol-relative, a fragment, or a scheme is
   // left alone.
-  $("link[href], script[src], img[src], a[href], form[action], iframe[src], source[srcset]").each((i, el) => {
+  const isAbsolute = v => /^(https?:|\/\/|#|data:|mailto:|tel:|whatsapp:|\/)/i.test(v);
+
+  $("link[href], script[src], img[src], a[href], form[action], iframe[src]").each((i, el) => {
     const tag = (el.tagName || "").toLowerCase();
     let attr = "href";
     if (tag === "script" || tag === "img" || tag === "iframe") attr = "src";
     else if (tag === "form") attr = "action";
-    else if (tag === "source") attr = "srcset";
     const v = $(el).attr(attr);
-    if (!v || /^(https?:|\/\/|#|data:|mailto:|tel:|whatsapp:|\/)/i.test(v)) return;
+    if (!v || isAbsolute(v)) return;
     $(el).attr(attr, BASE + "/" + v);
+  });
+
+  /* srcset and imagesrcset are comma-separated candidate lists, so they need
+     rewriting entry by entry — not as a single URL.
+     This bit is load-bearing: a relative srcset on /en/ resolves against
+     /en/, i.e. /hostal-bellavista/en/assets/…, which 404s. The browser
+     prefers srcset over src, so the image silently breaks on every language
+     page except the Spanish root (where the relative path happens to be
+     correct). That is exactly how it shipped broken once already. */
+  $("img[srcset], source[srcset], link[imagesrcset]").each((i, el) => {
+    const attr = el.tagName.toLowerCase() === "link" ? "imagesrcset" : "srcset";
+    const v = $(el).attr(attr);
+    if (!v) return;
+    $(el).attr(attr, v.split(",").map(part => {
+      const s = part.trim();
+      if (!s) return "";
+      const sp = s.indexOf(" ");
+      const url = sp === -1 ? s : s.slice(0, sp);
+      const desc = sp === -1 ? "" : s.slice(sp);
+      return (isAbsolute(url) ? url : BASE + "/" + url) + desc;
+    }).filter(Boolean).join(", "));
   });
 
   /* ---- Language menu + in-page language-aware links ---- */

@@ -89,7 +89,7 @@ es: {
       ]},
       { h: "Servicios externos", body: [
         ["El mapa de la página de contacto se muestra mediante un iframe de Google Maps. Al cargarlo, Google puede instalar sus propias cookies y recibir su dirección IP, conforme a su política de privacidad.",
-         "Las tipografías se sirven desde Google Fonts.",
+         "Las tipografías se sirven desde este mismo servidor: no se realiza ninguna petición a Google Fonts y, por tanto, no se comunica su dirección IP a Google al cargar la página.",
          "Al pulsar «Reservar» abandona esta web y accede a nuestro motor de reservas, que aplica su propia política de cookies."]
       ]},
       { h: "Cómo controlarlas", body: [
@@ -171,7 +171,7 @@ en: {
       ]},
       { h: "External services", body: [
         ["The map on the contact section is embedded from Google Maps. Loading it may allow Google to set its own cookies and to receive your IP address, under its privacy policy.",
-         "Typefaces are served from Google Fonts.",
+         "Typefaces are served from this site itself: no request is made to Google Fonts, so your IP address is not disclosed to Google when the page loads.",
          "Clicking “Book” takes you off this site to our reservation engine, which applies its own cookie policy."]
       ]},
       { h: "How to control them", body: [
@@ -253,7 +253,7 @@ it: {
       ]},
       { h: "Servizi esterni", body: [
         ["La mappa nella sezione contatti è incorporata da Google Maps. Caricandola, Google può installare i propri cookie e ricevere il vostro indirizzo IP, secondo la propria informativa.",
-         "I caratteri tipografici sono serviti da Google Fonts.",
+         "I caratteri tipografici sono serviti da questo stesso server: non viene effettuata alcuna richiesta a Google Fonts e quindi il vostro indirizzo IP non viene comunicato a Google al caricamento della pagina.",
          "Premendo «Prenota» lasciate questo sito e accedete al nostro motore di prenotazione, che applica la propria politica dei cookie."]
       ]},
       { h: "Come controllarli", body: [
@@ -335,7 +335,7 @@ de: {
       ]},
       { h: "Externe Dienste", body: [
         ["Die Karte im Kontaktbereich wird als iframe von Google Maps eingebunden. Beim Laden kann Google eigene Cookies setzen und Ihre IP-Adresse erhalten, nach Maßgabe seiner Datenschutzerklärung.",
-         "Die Schriften werden von Google Fonts ausgeliefert.",
+         "Die Schriften werden von diesem Server selbst ausgeliefert: Es erfolgt keine Anfrage an Google Fonts, Ihre IP-Adresse wird beim Laden der Seite also nicht an Google übermittelt.",
          "Mit einem Klick auf „Buchen“ verlassen Sie diese Website und gelangen zu unserem Buchungssystem mit eigener Cookie-Richtlinie."]
       ]},
       { h: "Wie Sie sie steuern", body: [
@@ -417,7 +417,7 @@ ca: {
       ]},
       { h: "Serveis externs", body: [
         ["El mapa de la secció de contacte es mostra mitjançant un iframe de Google Maps. En carregar-lo, Google pot instal·lar les seves pròpies galetes i rebre la vostra adreça IP, d'acord amb la seva política de privacitat.",
-         "Les tipografies se serveixen des de Google Fonts.",
+         "Les tipografies se serveixen des d'aquest mateix servidor: no es fa cap petició a Google Fonts i, per tant, no es comunica la vostra adreça IP a Google en carregar la pàgina.",
          "En prémer «Reservar» abandoneu aquest lloc i accediu al nostre motor de reserves, que aplica la seva pròpia política de galetes."]
       ]},
       { h: "Com controlar-les", body: [

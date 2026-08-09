@@ -38,13 +38,24 @@
   <meta name="twitter:image" content="https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg" />
 
   <link rel="icon" href="assets/images/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />  <link rel="stylesheet" href="css/fonts.css?v=20260810a" />
+  <!-- The two faces used above the fold. Preloaded so the hero headline paints
+       without waiting for the stylesheet to be parsed first. -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/playfair-display-500-latin.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/mulish-400-latin.woff2" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=20260810a" />
 
-  <link rel="stylesheet" href="css/styles.css?v=20260809a" />
+  <!-- Preload the hero at the width this viewport will actually pick, so the
+       LCP image starts downloading before the CSS and layout are resolved. -->
+  <link rel="preload" as="image" href="assets/images/hero.webp"
+        imagesrcset="assets/images/hero-480.webp 480w, assets/images/hero-960.webp 960w, assets/images/hero.webp 1280w"
+        imagesizes="100vw" fetchpriority="high" />
+
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- The booking engine and map are the only third parties this page reaches. -->
+  <link rel="dns-prefetch" href="https://hostal-bellavista.amenitiz.io" />
 
   <!-- Structured data. The property is two businesses at one address: a hotel
        and a restaurant. Modelling both, linked, is what lets Google show room
@@ -130,6 +141,7 @@
         <a href="#restaurant" data-i18n="nav.restaurant">Restaurante</a>
         <a href="#services"   data-i18n="nav.services">Servicios</a>
         <a href="#gallery"    data-i18n="nav.gallery">Galería</a>
+        <a href="#guide"      data-i18n="nav.guide">Formentera</a>
         <a href="#location"   data-i18n="nav.location">Cómo llegar</a>
         <a href="#contact"    data-i18n="nav.contact">Contacto</a>
         <a class="nav-book" href="#" data-book="" target="_blank" rel="noopener" data-i18n="nav.book">Reservar</a>
@@ -153,6 +165,12 @@
   <main id="main">
   <!-- ============================= HERO ============================= -->
   <section class="hero" id="home">
+    <!-- LCP element. Eagerly loaded, high priority, and preloaded in <head>. -->
+    <img class="hero-img" src="assets/images/hero.webp"
+         srcset="assets/images/hero-480.webp 480w, assets/images/hero-960.webp 960w, assets/images/hero.webp 1280w"
+         sizes="100vw" width="1280" height="853"
+         fetchpriority="high" decoding="async"
+         data-i18n-attr="alt:hero.imgAlt" alt="" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow" data-i18n="hero.eyebrow">Puerto de La Savina · Formentera</p>
@@ -247,8 +265,11 @@
       <div class="split">
         <div class="split-media">
           <figure>
-            <img src="assets/images/hostal-exterior.webp" data-i18n-attr="alt:about.imgAlt" alt=""
-                 width="900" height="1125" loading="lazy" decoding="async" />
+            <img src="assets/images/hostal-exterior.webp"
+                 srcset="assets/images/hostal-exterior-480.webp 480w, assets/images/hostal-exterior.webp 683w"
+                 sizes="(max-width: 900px) 92vw, 46vw"
+                 data-i18n-attr="alt:about.imgAlt" alt=""
+                 width="683" height="1024" loading="lazy" decoding="async" />
           </figure>
         </div>
         <div class="split-text">
@@ -354,8 +375,11 @@
         </div>
         <div class="split-media">
           <figure>
-            <img src="assets/images/restaurant-terrace.webp" data-i18n-attr="alt:restaurant.imgAlt" alt=""
-                 width="1000" height="667" loading="lazy" decoding="async" />
+            <img src="assets/images/restaurant-terrace.webp"
+                 srcset="assets/images/restaurant-terrace-480.webp 480w, assets/images/restaurant-terrace-960.webp 960w, assets/images/restaurant-terrace.webp 1300w"
+                 sizes="(max-width: 900px) 92vw, 46vw"
+                 data-i18n-attr="alt:restaurant.imgAlt" alt=""
+                 width="1300" height="870" loading="lazy" decoding="async" />
           </figure>
         </div>
       </div>
@@ -443,6 +467,44 @@
              data-i18n="location.openMaps">Abrir en Google Maps</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ========================== ISLAND GUIDE ========================
+       Carried over from the old site's "Actividades en Formentera" page,
+       which was the only substantial piece of original writing either site
+       had. Rendered from GUIDE in js/i18n.js. -->
+  <section class="section section-alt" id="guide">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="guide.eyebrow">El entorno</p>
+        <h2 data-i18n="guide.title">Formentera desde La Savina</h2>
+        <p class="lead" data-i18n="guide.lead"></p>
+      </div>
+
+      <div class="narrow" style="margin:0 auto">
+        <p data-i18n="guide.p1"></p>
+        <p data-i18n="guide.p2"></p>
+      </div>
+
+      <div class="guide-grid" id="guideGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================== FAQ =============================
+       Every answer here is a fact the property actually publishes. Questions
+       whose answers are unknown (rates, check-in times, pets, opening hours)
+       are deliberately absent rather than answered vaguely — a wrong answer in
+       an AI summary or a search snippet is worse than no answer.
+       Rendered from FAQ in js/i18n.js; also emitted as FAQPage JSON-LD. -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="faq.eyebrow">Preguntas frecuentes</p>
+        <h2 data-i18n="faq.title">Lo que más nos preguntan</h2>
+        <p class="lead" data-i18n="faq.lead"></p>
+      </div>
+      <div class="faq-list" id="faqList"></div>
     </div>
   </section>
 
@@ -558,6 +620,8 @@
             <li><a href="#rooms" data-i18n="nav.rooms">Habitaciones</a></li>
             <li><a href="#restaurant" data-i18n="nav.restaurant">Restaurante</a></li>
             <li><a href="#gallery" data-i18n="nav.gallery">Galería</a></li>
+            <li><a href="#guide" data-i18n="nav.guide">Formentera</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">Preguntas frecuentes</a></li>
             <li><a href="#location" data-i18n="nav.location">Cómo llegar</a></li>
             <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
           </ul>

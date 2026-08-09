@@ -1,9 +1,13 @@
 /* Turn the originals in _incoming/ into web-ready WebP under assets/images/.
  *
- * Long edge capped at 1600 px (2000 for the hero), quality 82. Prints a
- * paste-ready manifest with real pixel dimensions — those go into GALLERY and
- * ROOMS in js/i18n.js so every <img> can carry explicit width/height and the
- * page never shifts while images load.
+ * For every content image this emits THREE widths — 480, 960 and full — named
+ * `foo-480.webp`, `foo-960.webp`, `foo.webp`. main.js builds a srcset from the
+ * base filename alone, so no extra data has to be threaded through i18n.js.
+ * Without this a 390 px phone downloads the full 1280–1800 px file.
+ *
+ * Prints a paste-ready manifest with real pixel dimensions — those go into
+ * GALLERY and ROOMS in js/i18n.js so every <img> carries explicit width/height
+ * and the page never shifts while images load.
  *
  * Run:  npm run optimize:images
  */
@@ -90,9 +94,12 @@ const JOBS = [
 
 fs.mkdirSync(OUT, { recursive: true });
 
+// Widths emitted alongside the full-size file, for srcset.
+const VARIANTS = [480, 960];
+
 (async () => {
   const manifest = [];
-  let bytesIn = 0, bytesOut = 0;
+  let bytesIn = 0, bytesOut = 0, variantCount = 0;
 
   for (const [src, out, opt] of JOBS) {
     const srcPath = path.join(IN, src);
@@ -116,10 +123,26 @@ fs.mkdirSync(OUT, { recursive: true });
     bytesOut += info.size;
 
     console.log("  ✓", out.padEnd(30), `${info.width}×${info.height}`, (info.size / 1024).toFixed(0) + " KB");
+
+    // Narrow variants for srcset. Icons and the social card don't need them.
+    if (!opt.png && !opt.jpeg && !opt.noVariants) {
+      for (const w of VARIANTS) {
+        if (w >= info.width) continue;                    // never upscale
+        const vOut = out.replace(/\.webp$/, `-${w}.webp`);
+        const v = await sharp(srcPath).rotate()
+          .resize(w, null, { fit: "inside", withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(path.join(OUT, vOut));
+        bytesOut += v.size; variantCount++;
+        console.log("      ↳", vOut.padEnd(34), `${v.width}×${v.height}`, (v.size / 1024).toFixed(0) + " KB");
+      }
+    }
+
     if (out.startsWith("gallery-") || out.startsWith("room-") || out.startsWith("apt-")) {
       manifest.push(`  { id: "${out.replace(/\.webp$/, "").replace(/^gallery-/, "")}", src: "assets/images/${out}", w: ${info.width}, h: ${info.height} },`);
     }
   }
+  console.log(`\n${variantCount} srcset variants emitted`);
 
   console.log(`\n${(bytesIn / 1048576).toFixed(1)} MB in → ${(bytesOut / 1048576).toFixed(1)} MB out`);
   console.log("\nPaste-ready entries for js/i18n.js:\n");

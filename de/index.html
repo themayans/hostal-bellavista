@@ -45,13 +45,22 @@
   <meta name="twitter:image" content="https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg">
 
   <link rel="icon" href="/hostal-bellavista/assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="/hostal-bellavista/assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/hostal-bellavista/assets/images/apple-touch-icon.png">  <link rel="stylesheet" href="/hostal-bellavista/css/fonts.css?v=20260810a">
+  <!-- The two faces used above the fold. Preloaded so the hero headline paints
+       without waiting for the stylesheet to be parsed first. -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/hostal-bellavista/assets/fonts/playfair-display-500-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/hostal-bellavista/assets/fonts/mulish-400-latin.woff2">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&amp;family=Mulish:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/hostal-bellavista/css/styles.css?v=20260810a">
 
-  <link rel="stylesheet" href="/hostal-bellavista/css/styles.css?v=20260809a">
+  <!-- Preload the hero at the width this viewport will actually pick, so the
+       LCP image starts downloading before the CSS and layout are resolved. -->
+  <link rel="preload" as="image" href="/hostal-bellavista/assets/images/hero.webp" imagesrcset="/hostal-bellavista/assets/images/hero-480.webp 480w, /hostal-bellavista/assets/images/hero-960.webp 960w, /hostal-bellavista/assets/images/hero.webp 1280w" imagesizes="100vw" fetchpriority="high">
+
+  <link rel="manifest" href="/hostal-bellavista/site.webmanifest">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- The booking engine and map are the only third parties this page reaches. -->
+  <link rel="dns-prefetch" href="https://hostal-bellavista.amenitiz.io">
 
   <!-- Structured data. The property is two businesses at one address: a hotel
        and a restaurant. Modelling both, linked, is what lets Google show room
@@ -142,6 +151,175 @@
       ],
       "sameAs": [
         "https://www.facebook.com/HostalRestauranteBellavista/"
+      ],
+      "inLanguage": [
+        "es",
+        "en",
+        "it",
+        "de",
+        "ca"
+      ],
+      "availableLanguage": [
+        "es",
+        "ca",
+        "en",
+        "it"
+      ],
+      "photo": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-port-wide.webp",
+          "width": 1800,
+          "height": 935,
+          "caption": "Panorama des Hafens von La Savina vom Wasser aus, mit dem Ort und den Liegeplätzen dahinter"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-sign.webp",
+          "width": 1280,
+          "height": 853,
+          "caption": "Schriftzug Hostal Bellavista auf der sandfarbenen Fassade vor blauem Himmel"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-food-marina.webp",
+          "width": 1300,
+          "height": 870,
+          "caption": "Ein Meeresfrüchte-Pastagericht und ein Glas Weißwein auf einem Tisch neben den Yachten im Hafen"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-dining-room.webp",
+          "width": 1400,
+          "height": 727,
+          "caption": "Innerer Speisesaal des Restaurants mit weißen Tischdecken und roten Stühlen"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-fishing-boat.webp",
+          "width": 683,
+          "height": 1024,
+          "caption": "Fischerboot am hölzernen Steg im Hafen von La Savina"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-marina-view.webp",
+          "width": 1300,
+          "height": 870,
+          "caption": "Der Yachthafen, von Palmen gerahmt, mit Ibiza am Horizont"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-paella.webp",
+          "width": 735,
+          "height": 534,
+          "caption": "Meeresfrüchte-Paella mit Garnelen, Kaisergranat, Muscheln und Zitrone"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://themayans.github.io/hostal-bellavista/assets/images/gallery-facade-olive.webp",
+          "width": 1280,
+          "height": 853,
+          "caption": "Die Fassade des Hostals von unten mit einem Olivenbaum im Vordergrund"
+        }
+      ],
+      "containsPlace": [
+        {
+          "@type": "HotelRoom",
+          "name": "Economy-Zimmer",
+          "description": "Ein gemütliches, komfortables Zimmer für zwei Personen mit Blick auf unseren Innenhof und frischer, moderner Einrichtung. Mit Doppelbett oder zwei Einzelbetten, eigenem Bad, Klimaanlage und Holzschreibtisch.",
+          "image": "https://themayans.github.io/hostal-bellavista/assets/images/room-economica.webp",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Doppelbett oder zwei Einzelbetten"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "person"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Free WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Air conditioning",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Private bathroom",
+              "value": true
+            }
+          ]
+        },
+        {
+          "@type": "HotelRoom",
+          "name": "Doppelzimmer Standard",
+          "description": "Zimmer nach außen für zwei Personen mit Blick auf die Straße. Mit Doppelbett oder zwei Einzelbetten, eigenem Bad mit Badewanne, Klimaanlage, Holzschreibtisch und großem Kleiderschrank.",
+          "image": "https://themayans.github.io/hostal-bellavista/assets/images/room-estandar.webp",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Doppelbett oder zwei Einzelbetten"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "person"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Free WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Air conditioning",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Private bathroom",
+              "value": true
+            }
+          ]
+        },
+        {
+          "@type": "HotelRoom",
+          "name": "Zimmer mit Hafenblick",
+          "description": "Unser schönstes Zimmer: geräumig, hell und mit herrlichem Blick auf den Hafen von La Savina. Mit Doppelbett, Sofa, eigenem Bad mit Badewanne und Pflegeprodukten, Klimaanlage, Holzschreibtisch und großem Kleiderschrank.",
+          "image": "https://themayans.github.io/hostal-bellavista/assets/images/room-vistapuerto.webp",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Doppelbett + Sofa"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "person"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Free WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Air conditioning",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Private bathroom",
+              "value": true
+            }
+          ]
+        }
       ]
     },
     {
@@ -169,7 +347,229 @@
       "image": "https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg",
       "containedInPlace": {
         "@id": "https://themayans.github.io/hostal-bellavista/#hotel"
+      },
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Mediterrane Küche und Meeresfrüchte",
+        "inLanguage": "de",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Reisgerichte & Paellas",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Fisch-Paella"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Gemischte Paella"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Meeresfrüchte-Paella"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Paella Bellavista",
+                "description": "Unsere Hauspaella"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Arroz a la marinera"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Arroz a banda"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Fideuà"
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Aus dem Meer",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Langusteneintopf",
+                "description": "Die Spezialität der Insel"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Krabbeneintopf"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Fisch-Zarzuela"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Fischplatte vom Grill"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Frischer Inselfisch aus dem Ofen"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Frischer Fisch in der Salzkruste"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Meeresfrüchteplatte",
+                "description": "Garnelen, Kaisergranat, Venusmuscheln und Krabbe"
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Vom Grill",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Gemischte Grillplatte"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Auswahl an Grillfleisch"
+              }
+            ]
+          }
+        ]
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://themayans.github.io/hostal-bellavista/#website",
+      "url": "https://themayans.github.io/hostal-bellavista/de/",
+      "name": "Hostal Restaurante Bellavista Formentera",
+      "inLanguage": "de",
+      "publisher": {
+        "@id": "https://themayans.github.io/hostal-bellavista/#hotel"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://themayans.github.io/hostal-bellavista/de/#webpage",
+      "url": "https://themayans.github.io/hostal-bellavista/de/",
+      "name": "Hostal Bellavista Formentera — Hotel und Restaurant am Hafen von La Savina",
+      "description": "Hostal und Restaurant in erster Reihe am Hafen von La Savina, Formentera. Familienbetrieb seit 1949. Direkt buchen zum besten Preis.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://themayans.github.io/hostal-bellavista/#website"
+      },
+      "about": {
+        "@id": "https://themayans.github.io/hostal-bellavista/#hotel"
+      },
+      "primaryImageOfPage": "https://themayans.github.io/hostal-bellavista/assets/images/hero.webp"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hostal Bellavista — am Hafen von La Savina, Formentera",
+          "item": "https://themayans.github.io/hostal-bellavista/de/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://themayans.github.io/hostal-bellavista/de/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie komme ich zum Hostal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formentera hat keinen Flughafen: Man kommt mit der Fähre aus Ibiza, und alle Fähren legen im Hafen von La Savina an. Das Hostal liegt in erster Reihe an genau diesem Hafen — Sie sehen uns, sobald Sie von Bord gehen. Taxi oder Transfer sind nicht nötig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie weit ist es zur Fähre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Etwa 200 Meter, zwei bis drei Minuten zu Fuß mit dem Koffer. Deshalb wählen uns viele Gäste für die erste und die letzte Nacht ihrer Reise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es WLAN in den Zimmern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Alle Zimmer haben kostenloses WLAN, und auch in den öffentlichen Bereichen des Hostals gibt es Empfang."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Haben die Zimmer eine Klimaanlage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, alle Zimmer haben eine Klimaanlage, dazu eigenes Bad, Fernseher, Schreibtisch und Kleiderschrank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hat das Hostal ein Restaurant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, im selben Gebäude, mit einer großen Terrasse zum Hafen. Es serviert mediterrane Küche und Meeresfrüchte: Langusteneintopf, Reisgerichte und Paellas, frischen Inselfisch und Gegrilltes. Auch Nicht-Hausgäste sind willkommen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich ein Auto oder einen Roller mieten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Wir vermitteln Auto-, Motorrad-, Roller- und Fahrradvermietung direkt am Hostal, ohne dass Sie dafür irgendwohin müssen. Für die Insel ist das mit Abstand das Bequemste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Sprachen spricht die Rezeption?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spanisch, Katalanisch, Englisch und Italienisch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Für wie viele Personen ist ein Zimmer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Zimmer des Hostals sind für zwei Personen. Wenn Sie zu mehreren reisen, fragen Sie uns: Wir haben 38 Zimmer und drei Apartments auf der Insel für drei, vier und fünf Personen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Liegen die Apartments im Hostal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Can Loca (Es Pujols), Can Peix 22 (La Savina) und Barbaroja (Ca Marí) sind eigenständige Unterkünfte an anderen Orten der Insel, mit eigener Küche und ohne Restaurant- oder Rezeptionsservice. Dort sollten Sie ein Fahrzeug haben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wann ist die beste Reisezeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Im Juli und August ist am meisten los, aber es ist auch am vollsten. Mai, Juni, September und Oktober sind meist ideal: Das Meer ist noch warm, das Licht klarer und die Insel viel ruhiger. Zwischen November und April liegt der Mittelwert bei etwa 16 °C."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lohnt sich die Direktbuchung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Über diese Website erhalten Sie den besten verfügbaren Preis ohne Vermittlungsprovision, und Sie haben es direkt mit uns zu tun, wenn sich etwas ändern soll."
+          }
+        }
+      ]
     }
   ]
 }</script>
@@ -192,6 +592,7 @@
         <a href="#restaurant" data-i18n="nav.restaurant">Restaurant</a>
         <a href="#services" data-i18n="nav.services">Leistungen</a>
         <a href="#gallery" data-i18n="nav.gallery">Galerie</a>
+        <a href="#guide" data-i18n="nav.guide">Formentera</a>
         <a href="#location" data-i18n="nav.location">Anfahrt</a>
         <a href="#contact" data-i18n="nav.contact">Kontakt</a>
         <a class="nav-book" href="#" data-book="" target="_blank" rel="noopener" data-i18n="nav.book">Buchen</a>
@@ -218,6 +619,8 @@
   <main id="main">
   <!-- ============================= HERO ============================= -->
   <section class="hero" id="home">
+    <!-- LCP element. Eagerly loaded, high priority, and preloaded in <head>. -->
+    <img class="hero-img" src="/hostal-bellavista/assets/images/hero.webp" srcset="/hostal-bellavista/assets/images/hero-480.webp 480w, /hostal-bellavista/assets/images/hero-960.webp 960w, /hostal-bellavista/assets/images/hero.webp 1280w" sizes="100vw" width="1280" height="853" fetchpriority="high" decoding="async" data-i18n-attr="alt:hero.imgAlt" alt="Die Fassade des Hostal Bellavista zwischen Palmen, in erster Reihe am Hafen von La Savina">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow" data-i18n="hero.eyebrow">Hafen von La Savina · Formentera</p>
@@ -311,7 +714,7 @@
       <div class="split">
         <div class="split-media">
           <figure>
-            <img src="/hostal-bellavista/assets/images/hostal-exterior.webp" data-i18n-attr="alt:about.imgAlt" alt="Fassade des Hostal Bellavista mit Schriftzug und der Restaurantterrasse unter einem Olivenbaum" width="900" height="1125" loading="lazy" decoding="async">
+            <img src="/hostal-bellavista/assets/images/hostal-exterior.webp" srcset="/hostal-bellavista/assets/images/hostal-exterior-480.webp 480w, /hostal-bellavista/assets/images/hostal-exterior.webp 683w" sizes="(max-width: 900px) 92vw, 46vw" data-i18n-attr="alt:about.imgAlt" alt="Fassade des Hostal Bellavista mit Schriftzug und der Restaurantterrasse unter einem Olivenbaum" width="683" height="1024" loading="lazy" decoding="async">
           </figure>
         </div>
         <div class="split-text">
@@ -417,7 +820,7 @@
         </div>
         <div class="split-media">
           <figure>
-            <img src="/hostal-bellavista/assets/images/restaurant-terrace.webp" data-i18n-attr="alt:restaurant.imgAlt" alt="Überdachte Terrasse des Restaurants Bellavista mit weiß eingedeckten Tischen am Hafen" width="1000" height="667" loading="lazy" decoding="async">
+            <img src="/hostal-bellavista/assets/images/restaurant-terrace.webp" srcset="/hostal-bellavista/assets/images/restaurant-terrace-480.webp 480w, /hostal-bellavista/assets/images/restaurant-terrace-960.webp 960w, /hostal-bellavista/assets/images/restaurant-terrace.webp 1300w" sizes="(max-width: 900px) 92vw, 46vw" data-i18n-attr="alt:restaurant.imgAlt" alt="Überdachte Terrasse des Restaurants Bellavista mit weiß eingedeckten Tischen am Hafen" width="1300" height="870" loading="lazy" decoding="async">
           </figure>
         </div>
       </div>
@@ -500,6 +903,44 @@
           <a class="btn btn-outline" data-contact="maps" href="#" target="_blank" rel="noopener" data-i18n="location.openMaps">In Google Maps öffnen</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ========================== ISLAND GUIDE ========================
+       Carried over from the old site's "Actividades en Formentera" page,
+       which was the only substantial piece of original writing either site
+       had. Rendered from GUIDE in js/i18n.js. -->
+  <section class="section section-alt" id="guide">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="guide.eyebrow">Die Umgebung</p>
+        <h2 data-i18n="guide.title">Formentera, von La Savina aus</h2>
+        <p class="lead" data-i18n="guide.lead">Unsere Tür öffnet sich zum einzigen Hafen der Insel — hier fängt alles an. Das sind die Orte, die wir unseren Gästen empfehlen.</p>
+      </div>
+
+      <div class="narrow" style="margin:0 auto">
+        <p data-i18n="guide.p1">Formentera ist mehr als das letzte Paradies des Mittelmeers für einen Sommerurlaub: eine erstaunlich gut erhaltene, ruhige Insel, die man in weniger als einer halben Stunde von einem Ende zum anderen durchfährt.</p>
+        <p data-i18n="guide.p2">Das milde Klima — zwischen November und April im Mittel etwa 16 °C — erlaubt es, einen großen Teil des Jahres zu baden, und im Herbst und Frühjahr zeigt sich die Insel von ihrer besten Seite: weniger Menschen, klareres Licht und weichere Farben als im Hochsommer. Ein Sonnenuntergang, oder einfach ein Blick aufs Meer, rechtfertigt die Reise für sich allein.</p>
+      </div>
+
+      <div class="guide-grid" id="guideGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================== FAQ =============================
+       Every answer here is a fact the property actually publishes. Questions
+       whose answers are unknown (rates, check-in times, pets, opening hours)
+       are deliberately absent rather than answered vaguely — a wrong answer in
+       an AI summary or a search snippet is worse than no answer.
+       Rendered from FAQ in js/i18n.js; also emitted as FAQPage JSON-LD. -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="faq.eyebrow">Häufige Fragen</p>
+        <h2 data-i18n="faq.title">Was Gäste uns am häufigsten fragen</h2>
+        <p class="lead" data-i18n="faq.lead">Wenn Sie nicht finden, was Sie suchen: schreiben oder rufen Sie an — wir antworten persönlich.</p>
+      </div>
+      <div class="faq-list" id="faqList"></div>
     </div>
   </section>
 
@@ -614,6 +1055,8 @@
             <li><a href="#rooms" data-i18n="nav.rooms">Zimmer</a></li>
             <li><a href="#restaurant" data-i18n="nav.restaurant">Restaurant</a></li>
             <li><a href="#gallery" data-i18n="nav.gallery">Galerie</a></li>
+            <li><a href="#guide" data-i18n="nav.guide">Formentera</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">Häufige Fragen</a></li>
             <li><a href="#location" data-i18n="nav.location">Anfahrt</a></li>
             <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
           </ul>

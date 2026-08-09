@@ -1,0 +1,23 @@
+{
+  "name": "Hostal Restaurante Bellavista Formentera",
+  "short_name": "Bellavista",
+  "description": "Hostal and Mediterranean seafood restaurant on the port of La Savina, Formentera.",
+  "start_url": "/hostal-bellavista/",
+  "scope": "/hostal-bellavista/",
+  "display": "standalone",
+  "background_color": "#f9f7f2",
+  "theme_color": "#0f5468",
+  "icons": [
+    {
+      "src": "/hostal-bellavista/assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/hostal-bellavista/assets/images/logo.png",
+      "sizes": "400x222",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

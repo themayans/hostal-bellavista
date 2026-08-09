@@ -66,9 +66,7 @@ for (const ref of REFS) {
   <link rel="canonical" href="${DOMAIN}${legalPath(ref, lang)}" />
 ${alternates}
   <link rel="icon" href="${BASE}/assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="${BASE}/css/fonts.css?v=20260810a" />
   <link rel="stylesheet" href="${BASE}/css/styles.css?v=20260809a" />
 </head>
 <body class="page-body">

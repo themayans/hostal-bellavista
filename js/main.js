@@ -89,6 +89,18 @@ const ASSET_BASE = (function () {
   return s ? s.replace(/js\/main\.js.*$/, "") : "";
 })();
 
+/* Build a srcset from a base image path. scripts/optimize-images.js emits
+   `foo-480.webp` and `foo-960.webp` next to every `foo.webp`, so the variants
+   are derivable from the filename and don't need storing in i18n.js.
+   `w` is the full-size width, used to avoid advertising a variant that is
+   wider than the original. */
+function srcsetFor(src, w) {
+  const set = [];
+  for (const v of [480, 960]) if (v < w) set.push(`${ASSET_BASE}${src.replace(/\.webp$/, `-${v}.webp`)} ${v}w`);
+  set.push(`${ASSET_BASE}${src} ${w}w`);
+  return set.join(", ");
+}
+
 const LANG = document.documentElement.lang || "es";
 const DICT = (typeof I18N !== "undefined" && (I18N[LANG] || I18N.es)) || {};
 const t = key => (DICT[key] != null ? DICT[key] : key);
@@ -217,7 +229,9 @@ if ((roomsGrid || apartmentsGrid) && typeof ROOMS !== "undefined") {
 
     card.innerHTML =
       `<div class="room-media">${tag}` +
-        `<img src="${ASSET_BASE}${room.img}" alt="${t("room." + room.id + ".alt") || ""}" loading="lazy" decoding="async"` +
+        `<img src="${ASSET_BASE}${room.img}" srcset="${srcsetFor(room.img, room.w)}"` +
+        ` sizes="(max-width: 560px) 92vw, (max-width: 1000px) 46vw, 31vw"` +
+        ` alt="${t("room." + room.id + ".alt") || ""}" loading="lazy" decoding="async"` +
         (room.w ? ` width="${room.w}"` : "") + (room.h ? ` height="${room.h}"` : "") + `>` +
       `</div>` +
       `<div class="room-body">` +
@@ -230,6 +244,36 @@ if ((roomsGrid || apartmentsGrid) && typeof ROOMS !== "undefined") {
         `</div>` +
       `</div>`;
     target.appendChild(card);
+  });
+}
+
+/* ---------- Island guide ---------- */
+const guideGrid = $("#guideGrid");
+if (guideGrid && typeof GUIDE !== "undefined") {
+  GUIDE.forEach(place => {
+    const card = document.createElement("article");
+    card.className = "guide-card";
+    card.innerHTML =
+      `<h3>${t("guide." + place.id + ".name")}</h3>` +
+      `<span class="guide-dist">${place.dist}</span>` +
+      `<p>${t("guide." + place.id + ".text")}</p>`;
+    guideGrid.appendChild(card);
+  });
+}
+
+/* ---------- FAQ ----------
+   Native <details> elements: keyboard-accessible, searchable with the
+   browser's own find-in-page, and they need no JavaScript to open. */
+const faqList = $("#faqList");
+if (faqList && typeof FAQ !== "undefined") {
+  FAQ.forEach((item, i) => {
+    const d = document.createElement("details");
+    d.className = "faq-item";
+    if (i === 0) d.open = true;
+    d.innerHTML =
+      `<summary>${t("faq." + item.id + ".q")}</summary>` +
+      `<div class="faq-answer"><p>${t("faq." + item.id + ".a")}</p></div>`;
+    faqList.appendChild(d);
   });
 }
 
@@ -278,6 +322,8 @@ if (grid && typeof GALLERY !== "undefined") {
     fig.dataset.index = i;
     const img = document.createElement("img");
     img.src = ASSET_BASE + item.src;
+    img.srcset = srcsetFor(item.src, item.w);
+    img.sizes = "(max-width: 560px) 92vw, (max-width: 900px) 46vw, 24vw";
     img.loading = "lazy";
     img.decoding = "async";
     if (item.w) img.width = item.w;

@@ -42,3 +42,6 @@ All three hotel room types sleep two people.
 Opening hours, room rates, check-in and check-out times, seasonal opening dates
 and pet/cancellation policies are not published on this site. Please contact the
 property directly rather than inferring them.
+
+## Full detail
+https://themayans.github.io/hostal-bellavista/llms-full.txt
