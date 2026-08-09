@@ -34,7 +34,6 @@ js/main.js                Behaviour + CONFIG (booking engine, contact details)  
 css/styles.css            The whole design system, responsive, print, reduced-motion
 scripts/build-home.js     _src/home.html + i18n.js  →  index.html, en|it|de|ca/index.html
 scripts/build-legal.js    legal-content.js          →  legal/<doc>/<lang>/index.html  (15 pages)
-scripts/build-misc.js     thanks pages, sitemap.xml, robots.txt, llms.txt
 scripts/build-misc.js     thanks pages, 404, sitemap, robots.txt, llms.txt, manifest
 scripts/fetch-images.js   One-off: pulled the originals off the old WordPress site
 scripts/optimize-images.js  _incoming/*.jpg → assets/images/*.webp @ 3 widths
