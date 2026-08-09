@@ -47,7 +47,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto is load-bearing. Every <img> carries width/height attributes so
+   the browser can reserve space and avoid layout shift — but as soon as CSS
+   sets a width, the attribute height stays in force and the photo is stretched
+   to fit. This keeps the intrinsic ratio in every case. */
+img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15; margin: 0 0 .4em; }
 h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: .2px; }
@@ -269,7 +273,9 @@ a  { color: inherit; text-decoration: none; }
    the image does. */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2rem; align-items: center; }
 .split > * { min-width: 0; }
-.split-media img { border-radius: var(--radius); box-shadow: var(--shadow); filter: var(--photo-filter); width: 100%; }
+/* width:100% + height:auto — the photo fills the column and keeps its own
+   proportions. Never give these a fixed height. */
+.split-media img { border-radius: var(--radius); box-shadow: var(--shadow); filter: var(--photo-filter); width: 100%; height: auto; }
 .split figure { margin: 0; }
 
 /* ---------- Rooms ---------- */
@@ -280,8 +286,13 @@ a  { color: inherit; text-decoration: none; }
   transition: transform .3s ease, box-shadow .3s ease;
 }
 .room-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.room-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--sand); }
-.room-media img { width: 100%; height: 100%; object-fit: cover; filter: var(--photo-filter); transition: transform .5s ease; }
+/* Room cards share one frame so the grid stays tidy, and the photo is CROPPED
+   to it (object-fit: cover) — never squashed. 3:2 is close to both the room
+   photos (≈1.93) and the apartment photos (1.5), so the crop stays modest.
+   If you would rather see each photo whole, drop the aspect-ratio and set
+   `height: auto` below; the cards will then have uneven image heights. */
+.room-media { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: var(--sand); }
+.room-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: var(--photo-filter); transition: transform .5s ease; }
 .room-card:hover .room-media img { transform: scale(1.05); }
 .room-tag {
   position: absolute; top: 12px; left: 12px; background: rgba(15,84,104,.94); color: #fff;
@@ -434,8 +445,12 @@ a  { color: inherit; text-decoration: none; }
 }
 .guide-card p { font-size: .95rem; color: var(--muted); margin: 0; }
 
-/* Skip painting long off-screen sections until they scroll near the viewport */
-#gallery, #faq, #guide { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+/* Skip painting long off-screen sections until they scroll near the viewport.
+   NOT applied to #gallery: content-visibility skips layout for off-screen
+   content, so the masonry code measured a zero-width grid and every tile got
+   the wrong row span. The few milliseconds saved were not worth a broken
+   gallery. */
+#faq, #guide { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 
 /* ---------- Contact ---------- */
 .contact-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; margin-top: 3rem; }

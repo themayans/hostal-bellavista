@@ -333,9 +333,12 @@ if (grid && typeof GALLERY !== "undefined") {
     grid.appendChild(fig);
   });
 
-  /* Balanced masonry: size each tile from its own aspect ratio, place it into
-     the currently-shortest column, then stretch the last tile of each column
-     so the gallery ends on a level bottom edge instead of a ragged one. */
+  /* Masonry: each tile is sized from its own aspect ratio and dropped into the
+     currently-shortest column.
+     Every tile keeps its photograph's true proportions — nothing is stretched
+     or cropped to tidy the grid. That leaves the bottom edge slightly ragged,
+     which is the honest trade: a panorama should look like a panorama, not be
+     squared off to line up with the column beside it. */
   const GAL_ROW = 8, GAL_GAP = 14;
   function layoutGallery() {
     const figs = [...grid.children];
@@ -343,33 +346,25 @@ if (grid && typeof GALLERY !== "undefined") {
     const cs = getComputedStyle(grid);
     const cols = cs.gridTemplateColumns.split(" ").filter(Boolean).length || 1;
     const colW = (grid.clientWidth - GAL_GAP * (cols - 1)) / cols;
-    const spanOf = fig => {
+    if (colW <= 0) return;                       // grid not laid out yet — try again later
+    const nextRow = new Array(cols).fill(1);
+    for (const fig of figs) {
       const item = GALLERY[+fig.dataset.index];
       const ratio = item && item.w && item.h ? item.h / item.w : 0.72;
-      return Math.max(1, Math.round((colW * ratio + GAL_GAP) / (GAL_ROW + GAL_GAP)));
-    };
-    const OFFSET = 3;
-    const nextRow = new Array(cols).fill(1);
-    if (cols >= 3) { nextRow[0] += OFFSET; nextRow[cols - 1] += OFFSET; }
-    const lastFig = new Array(cols).fill(null), lastSpan = new Array(cols).fill(0);
-    for (const fig of figs) {
+      const span = Math.max(1, Math.round((colW * ratio + GAL_GAP) / (GAL_ROW + GAL_GAP)));
       let c = 0;
       for (let k = 1; k < cols; k++) if (nextRow[k] < nextRow[c]) c = k;
-      const span = spanOf(fig);
       fig.style.gridColumnStart = c + 1;
       fig.style.gridRowStart = nextRow[c];
       fig.style.gridRowEnd = "span " + span;
       nextRow[c] += span;
-      lastFig[c] = fig; lastSpan[c] = span;
-    }
-    const bottom = Math.max.apply(null, nextRow);
-    for (let c = 0; c < cols; c++) {
-      if (!lastFig[c]) continue;
-      const extra = bottom - nextRow[c];
-      if (extra > 0) lastFig[c].style.gridRowEnd = "span " + (lastSpan[c] + extra);
     }
   }
   layoutGallery();
+  // Re-run once fonts and images have settled: the first pass can measure the
+  // grid before the layout is final.
+  window.addEventListener("load", layoutGallery);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutGallery);
   let galRAF;
   window.addEventListener("resize", () => {
     cancelAnimationFrame(galRAF);
