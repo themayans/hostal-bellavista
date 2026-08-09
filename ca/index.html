@@ -1,0 +1,643 @@
+<!DOCTYPE html><!--
+  MASTER TEMPLATE — do not edit the generated pages directly.
+
+  This file is the single source of truth for the homepage markup. Running
+  `npm run build:home` renders it once per language into index.html (Spanish,
+  at the root) and en/ it/ de/ ca/index.html.
+
+  Text comes from js/i18n.js via data-i18n="key" attributes. To change copy,
+  edit js/i18n.js and re-run the build — never edit the generated HTML.
+--><html lang="ca"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hostal Bellavista Formentera — Hotel i restaurant al port de la Savina</title>
+  <meta name="description" data-i18n="meta.description" content="Hostal i restaurant en primera línia del port de la Savina, Formentera. Família formenterera des de 1949. Reserveu directament al millor preu.">
+  <meta name="theme-color" content="#0f5468">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <!-- Transposh on the old site fought Chrome's auto-translate; each page here
+       is already served in its own language, so opt out of machine translation. -->
+  <meta name="google" content="notranslate">
+
+  <link rel="canonical" href="https://themayans.github.io/hostal-bellavista/ca/">
+  <link rel="alternate" hreflang="es" href="https://themayans.github.io/hostal-bellavista/">
+  <link rel="alternate" hreflang="en" href="https://themayans.github.io/hostal-bellavista/en/">
+  <link rel="alternate" hreflang="it" href="https://themayans.github.io/hostal-bellavista/it/">
+  <link rel="alternate" hreflang="de" href="https://themayans.github.io/hostal-bellavista/de/">
+  <link rel="alternate" hreflang="ca" href="https://themayans.github.io/hostal-bellavista/ca/">
+  <link rel="alternate" hreflang="x-default" href="https://themayans.github.io/hostal-bellavista/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hostal Restaurante Bellavista Formentera">
+  <meta property="og:title" content="Hostal Bellavista — al port de la Savina, Formentera">
+  <meta property="og:description" content="Hostal i restaurant en primera línia del port de la Savina, Formentera. Família formenterera des de 1949. Reserveu directament al millor preu.">
+  <meta property="og:url" content="https://themayans.github.io/hostal-bellavista/ca/">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:image" content="https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hostal Bellavista — al port de la Savina, Formentera">
+  <meta name="twitter:description" content="Hostal i restaurant en primera línia del port de la Savina, Formentera. Família formenterera des de 1949. Reserveu directament al millor preu.">
+  <meta name="twitter:image" content="https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg">
+
+  <link rel="icon" href="/hostal-bellavista/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="/hostal-bellavista/assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&amp;family=Mulish:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/hostal-bellavista/css/styles.css?v=20260809a">
+
+  <!-- Structured data. The property is two businesses at one address: a hotel
+       and a restaurant. Modelling both, linked, is what lets Google show room
+       and menu rich results. build-home.js localises description/url per
+       language. -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Hotel",
+      "@id": "https://themayans.github.io/hostal-bellavista/#hotel",
+      "name": "Hostal Bellavista Formentera",
+      "description": "Hostal i restaurant en primera línia del port de la Savina, Formentera. Família formenterera des de 1949. Reserveu directament al millor preu.",
+      "url": "https://themayans.github.io/hostal-bellavista/ca/",
+      "logo": "https://themayans.github.io/hostal-bellavista/assets/images/logo.png",
+      "image": "https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "telephone": "+34971323324",
+      "faxNumber": "+34971322672",
+      "email": "reservas@hostal-bellavista.com",
+      "foundingDate": "1949",
+      "numberOfRooms": 38,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Polígon de la Marina, 8",
+        "addressLocality": "La Savina, Formentera",
+        "postalCode": "07870",
+        "addressRegion": "Illes Balears",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.7326075,
+        "longitude": 1.4156931
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=38.7326075,1.4156931",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": 3
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free WiFi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Air conditioning",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Restaurant",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Bar",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Terrace with harbour view",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vehicle rental (cars, scooters, bicycles)",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Private bathroom in every room",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Television",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Desk",
+          "value": true
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/HostalRestauranteBellavista/"
+      ]
+    },
+    {
+      "@type": "Restaurant",
+      "@id": "https://themayans.github.io/hostal-bellavista/#restaurant",
+      "name": "Restaurante Bellavista",
+      "description": "Restaurant mediterrani i de marisc al port de la Savina: caldereta de llagosta, arrossos de l'illa, peix fresc i graellades, amb terrassa davant dels amarradors.",
+      "url": "https://themayans.github.io/hostal-bellavista/ca/",
+      "servesCuisine": [
+        "Mediterranean",
+        "Seafood",
+        "Spanish"
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "telephone": "+34971323324",
+      "address": {
+        "@id": "https://themayans.github.io/hostal-bellavista/#hotel"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.7326075,
+        "longitude": 1.4156931
+      },
+      "image": "https://themayans.github.io/hostal-bellavista/assets/images/og-image.jpg",
+      "containedInPlace": {
+        "@id": "https://themayans.github.io/hostal-bellavista/#hotel"
+      }
+    }
+  ]
+}</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Vés al contingut principal</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <span class="brand-name">Bellavista</span>
+        <span class="brand-sub" data-i18n="brand.sub">Formentera · des de 1949</span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Principal">
+        <a href="#about" data-i18n="nav.about">L'hostal</a>
+        <a href="#rooms" data-i18n="nav.rooms">Habitacions</a>
+        <a href="#restaurant" data-i18n="nav.restaurant">Restaurant</a>
+        <a href="#services" data-i18n="nav.services">Serveis</a>
+        <a href="#gallery" data-i18n="nav.gallery">Galeria</a>
+        <a href="#location" data-i18n="nav.location">Com arribar</a>
+        <a href="#contact" data-i18n="nav.contact">Contacte</a>
+        <a class="nav-book" href="#" data-book="" target="_blank" rel="noopener" data-i18n="nav.book">Reservar</a>
+
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" data-i18n-attr="aria-label:a11y.language" aria-label="Canvia d'idioma">
+            <span id="langCurrent">CA</span><span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="menu">
+            <li><a href="/hostal-bellavista/" data-lang="es" role="menuitem">Español</a></li>
+            <li><a href="/hostal-bellavista/en/" data-lang="en" role="menuitem">English</a></li>
+            <li><a href="/hostal-bellavista/it/" data-lang="it" role="menuitem">Italiano</a></li>
+            <li><a href="/hostal-bellavista/de/" data-lang="de" role="menuitem">Deutsch</a></li>
+            <li><a href="/hostal-bellavista/ca/" data-lang="ca" role="menuitem" aria-current="true">Català</a></li></ul>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" data-i18n-attr="aria-label:a11y.menu" aria-label="Obre el menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+  <!-- ============================= HERO ============================= -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Port de la Savina · Formentera</p>
+      <h1 class="hero-title" data-i18n="hero.title">Hostal Bellavista</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Hostal i restaurant en primera línia del port</p>
+      <p class="hero-since" data-i18n="hero.since">Una família formenterera des de 1949</p>
+
+      <!-- Booking bar: dates + guests, deep-linked into the booking engine -->
+      <form class="book-bar" id="bookBar" onsubmit="return false;">
+        <div class="bb-field">
+          <label for="bb-in" data-i18n="book.checkin">Entrada</label>
+          <button type="button" class="date-field" id="bb-in">
+            <span class="date-val placeholder" data-i18n="book.pickDate">dd/mm/aaaa</span>
+            <svg class="date-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm12 8v9H5v-9h14Z"></path></svg>
+          </button>
+        </div>
+
+        <div class="bb-field">
+          <label for="bb-out" data-i18n="book.checkout">Sortida</label>
+          <button type="button" class="date-field" id="bb-out">
+            <span class="date-val placeholder" data-i18n="book.pickDate">dd/mm/aaaa</span>
+            <svg class="date-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm12 8v9H5v-9h14Z"></path></svg>
+          </button>
+        </div>
+
+        <div class="bb-field">
+          <label for="bb-guests" data-i18n="book.guestsLabel">Hostes</label>
+          <button type="button" class="guest-field" id="bb-guests">
+            <span id="guestVal">2</span>
+            <svg class="date-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4 0-9 2-9 5v3h18v-3c0-3-5-5-9-5Z"></path></svg>
+          </button>
+        </div>
+
+        <a class="btn btn-primary" id="bookSubmit" data-book="" href="#" target="_blank" rel="noopener" data-i18n="book.search">Consultar disponibilitat</a>
+
+        <p class="bb-note">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1 15-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7Z"></path></svg>
+          <span data-i18n="book.note">Millor preu garantit reservant directament amb nosaltres</span>
+        </p>
+
+        <div class="nights-badge" id="nightsBadge" hidden="">
+          <span id="nightsText"></span>
+        </div>
+
+        <!-- Popovers (positioned by main.js) -->
+        <div class="calendar" id="calendar" hidden="">
+          <p class="cal-mode" id="calMode"></p>
+          <div class="cal-head">
+            <button type="button" class="cal-nav" data-cal="-1" aria-label="←">‹</button>
+            <span class="cal-title" id="calTitle"></span>
+            <button type="button" class="cal-nav" data-cal="1" aria-label="→">›</button>
+          </div>
+          <div class="cal-weekdays" id="calWeekdays"></div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+
+        <div class="guest-pop" id="guestPop" hidden="">
+          <div class="stepper-row">
+            <span><span class="stepper-label" data-i18n="book.adults">Adults</span>
+                  <span class="stepper-sub" data-i18n="book.adultsSub">13 anys o més</span></span>
+            <span class="stepper">
+              <button type="button" class="step-btn" data-step="adults" data-dir="-1" aria-label="−">−</button>
+              <span class="step-val" id="adultsVal">2</span>
+              <button type="button" class="step-btn" data-step="adults" data-dir="1" aria-label="+">+</button>
+            </span>
+          </div>
+          <div class="stepper-row">
+            <span><span class="stepper-label" data-i18n="book.children">Infants</span>
+                  <span class="stepper-sub" data-i18n="book.childrenSub">De 0 a 12 anys</span></span>
+            <span class="stepper">
+              <button type="button" class="step-btn" data-step="children" data-dir="-1" aria-label="−">−</button>
+              <span class="step-val" id="childrenVal">0</span>
+              <button type="button" class="step-btn" data-step="children" data-dir="1" aria-label="+">+</button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <a class="hero-scroll" href="#about" aria-hidden="true">↓</a>
+  </section>
+
+  <!-- ============================ ABOUT ============================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="about.eyebrow">L'hostal</p>
+        <h2 data-i18n="about.title">Setanta-cinc anys davant del mar</h2>
+        <p class="lead" data-i18n="about.lead">Un establiment familiar a l'únic port de Formentera, a pocs metres del moll on atraquen els ferris d'Eivissa.</p>
+      </div>
+
+      <div class="split">
+        <div class="split-media">
+          <figure>
+            <img src="/hostal-bellavista/assets/images/hostal-exterior.webp" data-i18n-attr="alt:about.imgAlt" alt="Façana de l'Hostal Bellavista amb el rètol i la terrassa del restaurant sota una olivera" width="900" height="1125" loading="lazy" decoding="async">
+          </figure>
+        </div>
+        <div class="split-text">
+          <p data-i18n="about.p1">L'Hostal Bellavista és en primera línia del port esportiu de la Savina, dins del poble i just davant dels amarradors. És el primer edifici que molts visitants veuen en arribar a l'illa i, per a força gent, el darrer record abans d'embarcar.</p>
+          <p data-i18n="about.p2">Treballem per a vosaltres des de 1949, millorant la casa any rere any per oferir a cada hoste una acollida realment propera. Tres generacions després, encara som nosaltres qui atenem la recepció i el menjador.</p>
+          <p data-i18n="about.p3">L'hostal disposa de bar i restaurant propis, d'una gran terrassa amb vistes al port i de lloguer de cotxes, motos, escúters i bicicletes per descobrir l'illa al vostre ritme.</p>
+        </div>
+      </div>
+
+      <div class="highlight-row">
+        <div class="highlight">
+          <span class="highlight-num">1949</span>
+          <span class="highlight-lbl" data-i18n="about.stat1">Obert des de</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-num">38</span>
+          <span class="highlight-lbl" data-i18n="about.stat2">Habitacions</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-num">0 m</span>
+          <span class="highlight-lbl" data-i18n="about.stat3">Del port</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-num">3 min</span>
+          <span class="highlight-lbl" data-i18n="about.stat4">Del ferri d'Eivissa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ROOMS ============================= -->
+  <section class="section section-alt" id="rooms">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="rooms.eyebrow">Allotjament</p>
+        <h2 data-i18n="rooms.title">Habitacions i apartaments</h2>
+        <p class="lead" data-i18n="rooms.lead">Trenta-vuit habitacions individuals, dobles i triples a l'hostal, més tres apartaments repartits per l'illa per a estades amb més espai.</p>
+      </div>
+
+      <!-- Cards are rendered from ROOMS in js/i18n.js -->
+      <div class="rooms-grid" id="roomsGrid"></div>
+
+      <div class="room-common">
+        <h3 data-i18n="rooms.commonTitle">A totes les habitacions</h3>
+        <ul class="amenity-inline">
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 19a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 12 19Zm0-4.3c1.5 0 2.9.6 3.9 1.6l-1.5 1.5a3.4 3.4 0 0 0-4.8 0L8.1 16.3a5.5 5.5 0 0 1 3.9-1.6Zm0-4.4c2.7 0 5.2 1.1 7 2.9l-1.5 1.5a7.8 7.8 0 0 0-11 0L5 13.2a9.8 9.8 0 0 1 7-2.9Zm0-4.4c3.9 0 7.5 1.6 10.1 4.1l-1.5 1.5a12.2 12.2 0 0 0-17.2 0L1.9 10A14.2 14.2 0 0 1 12 5.9Z"></path></svg><span data-i18n="rooms.a1">Wifi gratuït</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 2h2v4.6l2.3-2.3 1.4 1.4L13 9.4v2.2l1.9-1.1 1.3-3.2 1.9.8-.9 2.2 2.2-.9.8 1.9-3.2 1.3-1.9 1.1 1.9 1.1 3.2 1.3-.8 1.9-2.2-.9.9 2.2-1.9.8-1.3-3.2-1.9-1.1v2.2l3.7 3.7-1.4 1.4L13 17.4V22h-2v-4.6l-2.3 2.3-1.4-1.4L11 14.6v-2.2l-1.9 1.1-1.3 3.2-1.9-.8.9-2.2-2.2.9-.8-1.9 3.2-1.3L8.9 12 7 10.9 3.8 9.6l.8-1.9 2.2.9-.9-2.2 1.9-.8 1.3 3.2 1.9 1.1V7.6L7.3 3.9l1.4-1.4L11 4.8V2Z"></path></svg><span data-i18n="rooms.a2">Aire condicionat</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 11V5a2 2 0 1 1 4 0v1H6v2h14a1 1 0 0 1 1 1v2H4Zm-1 2h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2Z"></path></svg><span data-i18n="rooms.a3">Bany privat amb banyera</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18v12H3V4Zm2 2v8h14V6H5ZM8 19h8v2H8v-2Z"></path></svg><span data-i18n="rooms.a4">Televisió</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3V6Zm0 4h18v2H3v-2Zm2 4h4v6H7v-4H5v-2Zm10 0h4v2h-2v4h-2v-6Z"></path></svg><span data-i18n="rooms.a5">Escriptori de fusta</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16v2H4V3Zm2 4h12v14H6V7Zm2 2v10h8V9H8Zm2 4h1v2h-1v-2Zm3 0h1v2h-1v-2Z"></path></svg><span data-i18n="rooms.a6">Armari</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h11a3 3 0 0 1 3 3v15h-2V6a1 1 0 0 0-1-1h-7.2A3 3 0 0 1 11 7v14H3V6a3 3 0 0 1 3-3h1Zm-1 3v13h3V6H6Z"></path></svg><span data-i18n="rooms.a7">Tovalloles i assecador</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17h18v2H3v-2Zm2-4h14l1 3H4l1-3Zm7-9 6 6H6l6-6Z"></path></svg><span data-i18n="rooms.a8">Neteja diària</span></li>
+        </ul>
+        <p class="menu-note" data-i18n="rooms.commonNote">Decoració tradicional i senzilla, pensada per descansar. Consulteu-nos per llits supletoris, bressols i estades llargues.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== RESTAURANT ========================== -->
+  <section class="section section-marine" id="restaurant">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="restaurant.eyebrow">Restaurant</p>
+        <h2 data-i18n="restaurant.title">Cuina mediterrània i marisc</h2>
+        <p class="lead" data-i18n="restaurant.lead">Acollidor i familiar, al mateix edifici que l'hostal i amb una gran terrassa amb vistes al port.</p>
+      </div>
+
+      <div class="split">
+        <div class="split-text">
+          <p data-i18n="restaurant.p1">Podeu gaudir de tota mena de plats, així com de les nostres especialitats: caldereta de llagosta i de cranc, graellades i sarsueles de peix, paelles de marisc i de carn, i arrossos a l'estil dels pescadors.</p>
+          <p data-i18n="restaurant.p2">Entre els plats típics de l'illa que servim hi trobareu paella de peix, mixta i de marisc i la nostra paella Bellavista, arròs a la marinera, arròs a banda, fideuà, peix fresc de l'illa al forn o a la sal i una varietat de carns a la brasa. Una carta àmplia per tastar la cuina de Formentera amb el port al davant i Eivissa a l'horitzó.</p>
+          <h3 data-i18n="restaurant.hoursTitle">Horari</h3>
+          <ul class="hours" id="hoursList">
+            <li><span class="h-day" data-i18n="restaurant.hoursDays">Dinars i sopars</span><span class="h-time" data-i18n="restaurant.hoursTime">Consulteu-nos</span></li>
+            <li><span class="h-day" data-i18n="restaurant.seasonDays">Temporada</span><span class="h-time" data-i18n="restaurant.seasonTime">Consulteu-nos</span></li>
+          </ul>
+          <p style="margin-top:1.4rem">
+            <a class="btn btn-primary" data-contact="phone" href="#" data-i18n="restaurant.reserve">Reservar taula per telèfon</a>
+          </p>
+        </div>
+        <div class="split-media">
+          <figure>
+            <img src="/hostal-bellavista/assets/images/restaurant-terrace.webp" data-i18n-attr="alt:restaurant.imgAlt" alt="Terrassa coberta del restaurant Bellavista amb taules vestides de blanc vora el port" width="1000" height="667" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+
+      <!-- Menu, tabbed by course; data lives in MENU in js/i18n.js -->
+      <div class="menu-tabs" id="menuTabs" role="tablist" data-i18n-attr="aria-label:restaurant.menuLabel" aria-label="Categories de la carta"></div>
+      <div id="menuPanel" role="tabpanel"></div>
+      <p class="menu-note" data-i18n="restaurant.menuNote">Carta orientativa. Els preus i la disponibilitat varien segons el mercat i la temporada; consulteu-nos en reservar.</p>
+    </div>
+  </section>
+
+  <!-- =========================== SERVICES =========================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="services.eyebrow">Serveis</p>
+        <h2 data-i18n="services.title">Tot el que necessiteu, al port</h2>
+        <p class="lead" data-i18n="services.lead">Els serveis propis d'un hostal de tres estrelles, en una posició difícil d'igualar a Formentera.</p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity">
+          <div class="amenity-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 11 6.5 6.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11h1a1 1 0 0 1 1 1v5h-2v2h-2v-2H7v2H5v-2H3v-5a1 1 0 0 1 1-1h1Zm2.3 0h9.4l-1-3H8.3l-1 3ZM6.5 13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm11 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"></path></svg></div>
+          <h3 data-i18n="services.s1.title">Lloguer de vehicles</h3>
+          <p data-i18n="services.s1.text">Cotxes, motos, escúters i bicicletes per recórrer l'illa des de la porta de l'hostal.</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v2H3v-2Zm2-3h14l2-6-5 2-4-6-4 6-5-2 2 6Z"></path></svg></div>
+          <h3 data-i18n="services.s2.title">Bar i terrassa</h3>
+          <p data-i18n="services.s2.text">Una gran terrassa davant dels amarradors, per esmorzar, dinar o fer una copa al capvespre.</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg></div>
+          <h3 data-i18n="services.s3.title">Al costat del ferri</h3>
+          <p data-i18n="services.s3.text">A pocs metres del moll on arriben els vaixells d'Eivissa: sense taxis ni trasllats en arribar.</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 8l10 5 10-5-10-5Zm0 7.2L5.6 7 12 4.9 18.4 7 12 10.2ZM2 11.5v5l10 5 10-5v-5l-10 5-10-5Z"></path></svg></div>
+          <h3 data-i18n="services.s4.title">Consell local</h3>
+          <p data-i18n="services.s4.text">Us expliquem quines cales visitar, quan hi ha mercat i on veure la millor posta de sol.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ GALLERY =========================== -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Galeria</p>
+        <h2 data-i18n="gallery.title">L'hostal, el restaurant i el port</h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- =========================== LOCATION =========================== -->
+  <section class="section" id="location">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="location.eyebrow">Com arribar</p>
+        <h2 data-i18n="location.title">Al port de la Savina</h2>
+        <p class="lead" data-i18n="location.lead">Som en primera línia del port, a molt pocs metres del moll de vaixells i ferris que arriben d'Eivissa.</p>
+      </div>
+
+      <div class="location-wrap">
+        <div>
+          <ul class="distance-list">
+            <li><span class="dist" data-i18n="location.d1n">200 m</span><span data-i18n="location.d1">Terminal de ferris d'Eivissa</span></li>
+            <li><span class="dist" data-i18n="location.d2n">3 km</span><span data-i18n="location.d2">Sant Francesc Xavier, la capital</span></li>
+            <li><span class="dist" data-i18n="location.d3n">5 km</span><span data-i18n="location.d3">Platja de ses Illetes</span></li>
+            <li><span class="dist" data-i18n="location.d4n">6 km</span><span data-i18n="location.d4">Es Pujols</span></li>
+            <li><span class="dist" data-i18n="location.d5n">22 km</span><span data-i18n="location.d5">Far de la Mola</span></li>
+          </ul>
+          <p class="menu-note" style="text-align:left" data-i18n="location.note">Distàncies aproximades per carretera. L'illa es recorre de punta a punta en menys de mitja hora.</p>
+        </div>
+
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps?q=38.7326075,1.4156931&amp;z=16&amp;output=embed" title="Mapa de l'Hostal Bellavista al port de la Savina" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-attr="title:location.mapTitle"></iframe>
+          <a class="btn btn-outline" data-contact="maps" href="#" target="_blank" rel="noopener" data-i18n="location.openMaps">Obrir a Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT =========================== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contacte</p>
+        <h2 data-i18n="contact.title">Reserveu o escriviu-nos</h2>
+        <p class="lead" data-i18n="contact.lead">Per reservar una habitació feu servir el cercador de disponibilitat. Per a taules, grups, estades llargues o qualsevol dubte, escriviu-nos i us contestem personalment.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-side">
+          <ul class="contact-list">
+            <li><a data-contact="phone" href="#"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1l-2.23 2.2Z"></path></svg></span><span>+34 971 323 324</span></a></li>
+            <li><a data-contact="phone2" href="#"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1l-2.23 2.2Z"></path></svg></span><span>+34 971 322 255</span></a></li>
+            <li><a data-contact="whatsapp" href="#" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a13 13 0 0 1-6.9-6c-.5-.8-.8-1.7-.8-2.5 0-.9.5-1.4.7-1.6.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.5l-.4.5c-.1.2-.3.3-.1.6a9.6 9.6 0 0 0 4 3.5c.3.1.5.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .1 0 .7-.2 1.3Z"></path></svg></span><span>WhatsApp</span></a></li>
+            <li><a data-contact="email" href="#"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8L4.4 7h15.2L12 13Z"></path></svg></span><span>reservas@hostal-bellavista.com</span></a></li>
+            <li><span class="ci-static"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg></span><span data-i18n="contact.address">Polígon de la Marina 8, 07870 La Savina, Formentera (Illes Balears)</span></span></li>
+          </ul>
+
+          <div class="info-card">
+            <h3 data-i18n="contact.infoTitle">Informació pràctica</h3>
+            <div class="info-row"><span class="k" data-i18n="contact.checkinK">Entrada</span><span class="v" data-i18n="contact.checkinV">A consultar</span></div>
+            <div class="info-row"><span class="k" data-i18n="contact.checkoutK">Sortida</span><span class="v" data-i18n="contact.checkoutV">A consultar</span></div>
+            <div class="info-row"><span class="k" data-i18n="contact.seasonK">Temporada</span><span class="v" data-i18n="contact.seasonV">A consultar</span></div>
+            <div class="info-row"><span class="k" data-i18n="contact.petsK">Animals</span><span class="v" data-i18n="contact.petsV">A consultar</span></div>
+            <div class="info-row"><span class="k" data-i18n="contact.langK">Idiomes</span><span class="v" data-i18n="contact.langV">Castellà, català, anglès i italià</span></div>
+          </div>
+        </div>
+
+        <!-- Enquiry form. FormSubmit posts the fields by email; no backend and
+             no database, so nothing personal is ever stored on this site. -->
+        <form class="contact-form" id="enquiryForm" method="POST" action="https://formsubmit.co/reservas@hostal-bellavista.com">
+          <input type="hidden" name="_subject" value="Consulta desde bellavista-formentera.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" id="cf-next" value="">
+          <!-- Honeypot: bots fill this, humans never see it -->
+          <input type="text" name="_honey" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <!-- Populated from the booking bar on submit -->
+          <input type="hidden" name="Entrada" id="hCheckin">
+          <input type="hidden" name="Salida" id="hCheckout">
+          <input type="hidden" name="Noches" id="hNights">
+          <input type="hidden" name="Huespedes" id="hGuests">
+
+          <div class="field two">
+            <div>
+              <label for="cf-name" data-i18n="form.name">Nom</label>
+              <input type="text" id="cf-name" name="Nombre" required="" autocomplete="name">
+            </div>
+            <div>
+              <label for="cf-email" data-i18n="form.email">Correu electrònic</label>
+              <input type="email" id="cf-email" name="Email" required="" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cf-phone" data-i18n="form.phone">Telèfon (opcional)</label>
+            <input type="tel" id="cf-phone" name="Telefono" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="cf-subject" data-i18n="form.subject">Motiu</label>
+            <select id="cf-subject" name="Motivo">
+              <option data-i18n="form.subj1">Reserva d'habitació</option>
+              <option data-i18n="form.subj2">Reserva de taula al restaurant</option>
+              <option data-i18n="form.subj3">Grups i estades llargues</option>
+              <option data-i18n="form.subj4">Lloguer de vehicles</option>
+              <option data-i18n="form.subj5">Altra consulta</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="cf-message" data-i18n="form.message">Missatge</label>
+            <textarea id="cf-message" name="Mensaje" rows="5" required=""></textarea>
+            <p class="field-hint" data-i18n="form.hint">Si heu triat dates a dalt, les inclourem automàticament a la vostra consulta.</p>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="cf-consent" required="">
+            <span data-i18n="form.consent">He llegit i accepto la política de privacitat.</span>
+          </label>
+
+          <button class="btn btn-marine" type="submit" data-i18n="form.send">Enviar consulta</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-brand">Hostal Restaurante Bellavista</p>
+          <p class="footer-about" data-i18n="footer.about">Un allotjament en primera línia del port esportiu de la Savina, on passar les vacances a Formentera de la manera més còmoda i agradable possible.</p>
+          <div class="footer-social">
+            <a data-contact="facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9c0-.9.3-1.5 1.5-1.5H16V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.3-3.7 3.9V11H7.5v3H10v8h3Z"></path></svg></a>
+            <a data-contact="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.9c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.2-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9C2.4 3.9 4 2.4 7.1 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.4a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0Z"></path></svg></a>
+            <a data-contact="tripadvisor" href="#" target="_blank" rel="noopener" aria-label="Tripadvisor"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 6c-3 0-5.7.8-7.8 2.2H0l1.9 2.1A5.3 5.3 0 0 0 10.6 17l1.4 2 1.4-2a5.3 5.3 0 0 0 8.7-6.7L24 8.2h-4.2C17.7 6.8 15 6 12 6Zm-5.3 10a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6Zm10.6 0a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6Zm-10.6-5a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4Zm10.6 0a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4Z"></path></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.navTitle">Navegació</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">L'hostal</a></li>
+            <li><a href="#rooms" data-i18n="nav.rooms">Habitacions</a></li>
+            <li><a href="#restaurant" data-i18n="nav.restaurant">Restaurant</a></li>
+            <li><a href="#gallery" data-i18n="nav.gallery">Galeria</a></li>
+            <li><a href="#location" data-i18n="nav.location">Com arribar</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contacte</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.contactTitle">Contacte</h4>
+          <ul>
+            <li><a data-contact="phone" href="#">+34 971 323 324</a></li>
+            <li><a data-contact="email" href="#">reservas@hostal-bellavista.com</a></li>
+            <li data-i18n="contact.address">Polígon de la Marina 8, 07870 La Savina, Formentera (Illes Balears)</li>
+            <li><a data-contact="maps" href="#" target="_blank" rel="noopener" data-i18n="location.openMaps">Obrir a Google Maps</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Hostal Restaurante Bellavista Formentera</p>
+        <p class="footer-legal">
+          <a data-legal="privacy" href="/hostal-bellavista/legal/privacy/ca/" data-i18n="footer.privacy">Política de privacitat</a>
+          <a data-legal="cookies" href="/hostal-bellavista/legal/cookies/ca/" data-i18n="footer.cookies">Política de galetes</a>
+          <a data-legal="notice" href="/hostal-bellavista/legal/notice/ca/" data-i18n="footer.notice">Avís legal</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky booking button (mobile only) -->
+  <div class="sticky-book">
+    <a class="btn btn-outline btn-sm" data-contact="phone" href="#" data-i18n="sticky.call">Trucar</a>
+    <a class="btn btn-primary btn-sm" data-book="" href="#" target="_blank" rel="noopener" data-i18n="sticky.book">Reservar</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" data-i18n-attr="aria-label:a11y.gallery" aria-label="Galeria d'imatges">
+    <button class="lb-close" id="lbClose" data-i18n-attr="aria-label:a11y.close" aria-label="Tanca">✕</button>
+    <button class="lb-prev" id="lbPrev" data-i18n-attr="aria-label:a11y.prev" aria-label="Anterior">‹</button>
+    <!-- No src attribute: an empty src resolves to the page URL and makes the
+         browser re-download the document. main.js sets it when opening. -->
+    <img class="lb-img" id="lbImg" alt="">
+    <button class="lb-next" id="lbNext" data-i18n-attr="aria-label:a11y.next" aria-label="Següent">›</button>
+    <p class="lb-caption" id="lbCaption"></p>
+  </div>
+
+  <script src="/hostal-bellavista/js/i18n.js?v=20260809a"></script>
+  <script src="/hostal-bellavista/js/main.js?v=20260809a"></script>
+
+
+</body></html>

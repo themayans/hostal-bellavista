@@ -1,0 +1,22 @@
+{
+  "name": "hostal-bellavista-tools",
+  "private": true,
+  "description": "Build tooling for the Hostal Restaurante Bellavista Formentera website. Nothing here ships to the browser.",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "serve": "node scripts/serve.js",
+    "build": "npm run build:home && npm run build:legal && npm run build:misc",
+    "build:home": "node scripts/build-home.js",
+    "build:legal": "node scripts/build-legal.js",
+    "build:misc": "node scripts/build-misc.js",
+    "fetch:images": "node scripts/fetch-images.js",
+    "optimize:images": "node scripts/optimize-images.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}
